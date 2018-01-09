@@ -1,0 +1,1097 @@
+\documentclass[final,12pt]{article}
+
+% Useful math commands
+\input{/Users/kimk13/Dropbox/Research/alpha_math.tex}
+
+% References
+\newcommand{\myreferences}{/Users/kimk13/Dropbox/Research/dissertn_bib}
+
+% image source
+%\graphicspath{{images/}{../images/}}
+%\graphicspath{ {/Users/kunheekim/Dropbox/Wharton/Research/Labor/gph/JMP/} }
+
+\title{Alternative Work Arrangement and Performance: Evidence from Nurses in Home Health Care}
+
+\author{Lucy Kim\thanks{NYU Langone Health, New York, NY 10016, USA.}}
+
+\date{\parbox{\linewidth}{\centering%
+ % Preliminary draft: Do not cite \endgraf\bigskip
+	January 2018 \hspace*{0cm} \endgraf\medskip
+	}}
+
+
+\begin{document}
+
+\begin{singlespace}
+\maketitle
+% \thispagestyle{empty}
+
+\begin{abstract}
+FILL
+\blfootnote{
+\noindent
+I thank Guy David, Mark Pauly, Scott Harrington, and Peter Cappelli for their invaluable guidance and suppport.
+I also thank David Baiada, Alan Wright, Ann Gallagher, and Stephanie Finnel for tremendous insight and data support throughout the project. The Leonard Davis Institute of Health Economics provided financial support.}
+\end{abstract}
+
+\end{singlespace}
+
+
+%--------------------------------------------------------------------
+%\newpage
+\section{Introduction}
+
+An increasing number of firms in the US hire workers in alternative work arrangements, defined as temporary help agency, on-call, contract company, and independently contracted or freelancing workers \citep{Katz2016}. Between 2005 and 2015, the percentage of workers in those arrangements rose from 10.7 percent to 15.8 percent, and 94 percent of the net employment growth in the US economy during this period is estimated to have occurred in alternative work arrangements \citep{Katz2016}. Health care, in particular, is one of the fastest growing industry groups with a 53-percent growth in the percentage of health care professionals in alternative work arrangements between 2005 and 2015 and a 74-percent growth between 1995 and 2015 \citep{Katz2016}.\footnote{The percentage of health care professionals in alternative work arrangements was 5.3 percent, 6 percent, and 9.2 percent in 1995, 2005, and 2015, respectively. \textit{Health care professionals} refers to workers in the \textit{Healthcare Practitioners and Technical Occupations} and \textit{Healthcare Support Occupations} groups, as defined by the Bureau of Labor Services. The former group includes physicians and nurses while the latter includes physician aides and nurse aides.}
+This trend of an increasing use of workers in alternative arrangements in health care naturally raises the question of whether using more of these workers has any impact on patient health outcomes, a central measure of performance in health care.
+
+Key problems in estimating the impact of using alternative work arrangements on health outcomes are attribution and selective assignment.
+A multitude of other organizational factors, such as facility resources or technology tools, simultaneously influence the patient experience and health outcomes. Provider organizations with more resources may adopt staffing practices---such as hiring more professionals in permanent work arrangements or providing better work environments---that achieve favorable health outcomes \citep{Aiken2007}.
+Moreover, providers may selectively assign patients to professionals in different work arrangements: for example, relatively healthier patients are matched with professionals in alternative work arrangements.
+
+In this paper, I use a novel and rich dataset on home health and develop an empirical framework that allows me to overcome these inference challenges.
+First, I use novel proprietary data on home health care utilization in which patients are isolated in their homes and thus their health outcomes are unlikely to be confounded by other facility resources.
+Second, I use a plausibly exogenous variation in patient assignment to different types of nurses using permanent nurses' activeness in the patient's area.
+
+There are different work arrangements used for both permanent and temporary workforces, respectively, in home health. Thus, to investigate whether permanent and temporary nurses yield a systematically different patient outcome, I estimate whether receiving more care from full-time nurses leads to a different likelihood of hospital readmission.
+%Full-time nurses comprise 60\% of an average patient's total nurse visits during her care, and determines whether patient's labor mix experience is tilted towards permanent nurses' care.
+
+My identification strategy is to exploit the variation in full-time nurses' activeness across ZIP codes and care timings.
+When a patient happened to live in a ZIP code or start home health care at a time that her firm used more full-time nurses, she would receive more full-time nurse visits. The patient's location and timing of care are potentially exogenous with respect to the patient's likelihood of readmission.
+
+For this analysis, I use proprietary home health data and construct patient-episode level data for a set of elderly patients who had a hospitalization prior to home health care during the years 2012--2015. I use a two-stage least squares (2SLS) estimation using the instrumental variable discussed above.
+My findings are twofold.
+First, patients who lived in ZIP codes where full-time nurses were more active at the start of care indeed had a higher proportion of full-time nurse visits.
+Second, patients who received a higher proportion of full-time nurse visits were less likely to be readmitted to a hospital.
+One-standard-deviation increase in the proportion of full-time nurse visits (0.41)---equivalent to about two more full-time nurse visits out of 6 in total---was associated with a 7-percent decrease in the likelihood of readmission compared to the mean.
+This effect holds after controlling for patients' underlying health characteristics, office-level demand and labor supply characteristics, patients' ZIP code fixed effects, firm fixed effects, month fixed effects, and fixed effects related to the timings of the start and end of care.
+Moreover, this estimated effect is conservative since when full-time nurses were active, firms tended to have sicker patients by several severity measures.
+%Third, patients who received a higher proportion of visits by part-time nurses with benefits and on-call nurses were substantially more likely to be readmitted.
+%One-standard-deviation increase in the proportion of visits by part-time nurses (0.25) was associated with a 138-percent increase in the likelihood of readmission.
+%One-standard-deviation increase in the proportion of visits by on-call nurses (0.30) was associated with a 206-percent increase in the likelihood of readmission.
+
+Previous literature has examined the effect of workers in alternative work arrangements on performance but there is a lack of consensus \citep{Bae2010, Xue2012, Lotti2012, Aiken2013, Figlio2015, Lasater2015, Hockenberry2016, Lu2016}.   %An increased use of contingent labor in the economy has been accompanied by growing literature on the potential links between contingent labor and lower quality \citep{Bae2010, Xue2012, Lotti2012, Aiken2013, Figlio2015, Lasater2015, Hockenberry2016, Lu2016}.
+On the one hand,
+\citet{Figlio2015} find in the university setting that students learned relatively more from contingent faculty in the first-term courses after controlling for student fixed effects and next-class-taken fixed effects, compared to tenure-track or tenured professors.
+In the hospital setting, %studies for the nursing workforce show mixed results.
+\citet{Xue2012} and \citet{Aiken2013} find no statistically significant difference in mortality in hospital units run by a higher share of supplemental registered nurses (RNs). \citet{Aiken2007} similarly find that supplemental nurses were not associated with poor patient outcomes after controlling for the quality of work environments.
+\citet{Lasater2015} find a greater use of supplemental RNs to have no statistically significant association with patient satisfactions measured by whether patients would recommend their hospital.
+On the other hand, \citet{Hockenberry2016} find that 10 dimensions of patient satisfaction scores were lower in hospitals with a higher proportion of contract nurse hours, even for patient satisfaction data coming from the same source as \citet{Lasater2015}.
+\citet{Bae2010} find the positive association between the level of external temporary RN hours and several poor patient safety outcomes, such as patient back injuries and falls, in hospitals.
+\citet{Pham2011} find that temporary staff, including physicians and nurses, was associated with more harmful medication errors in emergency departments.
+\citet{Lu2016} also find greater service quality deficiency citations in nursing homes employing greater RN contract hours as a proportion of total resident days.
+\citet{Lotti2012} find that reforms incentivizing the use of permanent labor were associated with higher total factor productivity in Italian manufacturing firms.
+
+
+
+ % why is it necessary to do another study then?
+The principal contribution of this paper is to overcome weaknesses in the prior literature by accounting for the non-random matching of providers in different work arrangements with patients.
+I demonstrate that accounting for this endogeneity is important as the OLS effects of the proportion of full-time nurse visits are not statistically significant whereas the 2SLS effects are statistically significant and greater in magnitude.
+To the best of my knowledge, this paper is the first to use an econometric method to overcome the inference problem.
+Broadly, the paper is related to the literature on the relationship between staffing and quality \citep{Needleman2011, Tong2011, Cook2012, Mark2013, Lin2014, Matsudaira2014}.
+
+
+The remainder of this paper is organized as follows.
+In Section~\ref{sec:background_ch1}, I provide brief background on home health care to provide necessary institutional details to understand my empirical strategy.  %including different work arrangements used, labor supply and pay characteristics of nurses hired in different work arrangements, and the practice of firms' assignment of nurses to patients.
+In Section~\ref{sec:data_ch1}, I describe the data and sample restriction rules.
+In Section~\ref{sec:est_prob}, I describe the key inference problems in estimating the effect of the proportion of full-time nurse visits on patient readmission.
+In Section~\ref{sec:emp_str}, I discuss the empirical strategy.
+In Section~\ref{sec:results_ch1}, I present the estimation results.
+In Section~\ref{sec:conclusion_ch1}, I conclude the paper.
+
+
+\section{Background} \label{sec:background_ch1}
+
+
+%Brief description of home health industry
+Home health care, which is provided to homebound patients who need skilled nursing or therapy services, is an important and rapidly growing segment of the post-acute care delivery system.
+Home health care is composed of largely six service disciplines in which home health firms demand labor: skilled nursing, home health or personal care aid, physical therapy, speech-language pathology, occupational therapy, and medical social services.\footnote{Medicare covers only these six discipilnes.}
+I provide a detailed background on the home health care industry and the workforce distribution across disciplines in Appendices~\ref{sec:appendix_bg_hhc} and \ref{sec:appendix_bg_hhcw}, respectively, at the end of the dissertation.
+
+In this paper, I focus on the skilled nursing workforce---the combination of registered nurses (RNs) and licensed practice nurses (LPNs)---since nurses provide the medical service most relevant to potentially determining hospital readmissions and since their visits account for the majority of overall home health visits.
+Thus, among the six service disciplines, home health firms' demand for skilled nurses is the highest and they maintain the largest capacity of them each week.
+
+%In Table~\ref{tab:defn_empl_arrangements}, I describe work arrangements of skilled nurses in my data and provide summary statistics for the number of nurses in each arrangement across all firms and weeks.
+Nurses are hired under largely two compensation schemes: salary with guaranteed work and expected number of visits for each week and piece-rate pays with no guaranteed work and visit-based hiring.
+Thus, one can think of salaried nurses as ``permanent'' and piece-rate paid as ``temporary'' workers in this paper.
+Under salary, nurses can be hired either on a full-time, part-time with benefits, or part-time without benefits basis, or for managerial or administrative positions.
+Full-time nurses are the primary salaried work arrangement, comprising 40 percent of a firm's workforce every week on average.
+Under piece-rate pay, nurses can be hired either on an on-call basis directly by the firms or hired as contractors through temporary help agencies.
+On-call nurses are the primary piece-rate paid work arrangement, comprising more than 30 percent of a firm's workforce every week on average.
+
+%As shown later, these non-main workers are used more when firms face greater demand fluctuations.
+
+
+
+%\footnote{While salaried and piece-rate paid workers form a main part of the workforce on a weekly basis, firms also supplement it with ``office or other'' workers whose primary duty is supervisory or administrative work or is in a different business division.}
+
+\subsection{Differences between Permanent and Temporary nurses: Descriptive Statistics} \label{sec:desc_diff_nurses} % sec:desc_lmix_hosp
+
+A lack of consensus in the previous literature on the effect of alternative work arrangements on quality and performance may reflect the fact that the effect plausibly varies across settings.
+However, theoretically there are opposing directions through which workers in alternative work arrangements can affect performance.
+On the one hand, lower-quality workers may be more likely to sort into alternative work arrangements if firms have lower standards of hiring for those arrangements.
+Once employed by a firm, workers hired in alternative work arrangements may also have shorter engagement with the firm and lack opportunities to develop firm-specific skills \citep{Broschak2006, Cuyper2008}
+or receive support from colleagues \citep{Witte2003}.
+Negative worker outcomes for workers in alternative work arrangements, such as lower wages or lower benefits, could reduce their morale and productivity \citep{Harley1994, Hockenberry2016}.
+
+On the other hand, using workers in alternative work arrangements could have a positive effect on performance if they provide supplementary labor to address a shortage or high workload of regular workers.
+Flexible staffing strategies could offset the negative effects of low staffing or high workload per worker which have been consistently noted by previous literature \citep{Aiken2010, Kuntz2014, BerryJaeker2016}.
+Moreover, to the extent that alternative work arrangements are used as a screening device or stepping stones for more permanent positions, the former do not necessarily attract less competent nurses \citep{Booth2002}. However, this case is unlikely in in my data since it is rare for permanent nurses to be hired first in temporary work arrangements and for temporary nurses to change into permanent positions.
+%Reflecting the divergence in the potential impacts of contingent workers on performance,
+
+
+Before examining the effect of the proportion of full-time nurse visits on patient readmission, I explore whether full-time nurses are different from nurses hired in other work arrangements.
+If there is no meaningful difference, there is no reason for firms to differentially treat them and expect any difference in the quality of care.
+In Table~\ref{tab:diff_nurses}, I report mean values of key labor supply and pay characteristics of nurses in each work arrangement.
+I focus on the comparison of full-time and on-call nurses, who represent the majority of salaried and piece-rate paid workforce.
+
+Full-time nurses had substantially higher workloads, as measured in terms of number of visits.
+Panel A shows that conditional on providing at least one visit, full-time nurses provided 22 visits per week on average compared to on-call nurses who provided 9 visits per week.
+However, the average length of visits provided by full-time nurses was at 46 minutes shorter by 4 minutes than that of on-call nurses.
+Reflecting the difference in workloads, full-time nurses were paid slightly less than 3 times the total weekly pay of on-call nurses, as shown in Panel B.
+However, on the per-visit rate, full-time nurses get paid less than on-call nurses by \$12 on average, which may be a compensating differential for benefits.
+Moreover, full-time nurses' average length of employment of 21 months was 5 months longer than that of on-call nurses.\footnote{To obtain these statistics, I restricted to nurses who terminated their employment, where the termination was defined as either permanently exiting the workforce or providing no visits for more than 90 consecutive days.}
+
+Another qualitative difference between salaried and piece-rate paid nurses lies in the amount of training and attendance of case review conferences. Data on these aspects are unavailable. However, according to interviews with administrators in the company which provided me with the data, salaried nurses must receive training at the start of employment and get additional training regularly. They also spend more time in the firm offices and attend conferences with other care team members to review patient cases. On the other hand, piece-rate paid nurses are not obliged to receive training at the start of employment and do not typically receive additional training afterwards. They also do not usually attend conferences for case reviews.
+
+Table~\ref{tab:diff_nurses} alone cannot entirely explain why a higher proportion of  full-time nurse visits would improve patient outcome (i.e. reduce hospital readmission).
+However, data suggest that full-time nurses accumulate much more experience by providing more visits as well as staying employed for longer.
+To the extent that the experience has a positive correlation with performance---whether it is due to the vintage effect or selection \citep{Murnane1981} or learning by doing \citep{David2009}---full-time nurses may provide higher quality of care.\footnote{\citet{Medoff1980} find no correlation between experience and relative rated performance though they find a strong correlation between experience and relative earnings among managerial and professional employees within the same grade level.}
+The same effect is predicted to the extent that full-time nurses develop greater expertise and superior knowledge of firms' culture and standards by spending more time at firms' offices and with colleagues.
+These forces, however, might be counterbalanced with factors such as shorter visit lengths or higher workloads \citep{Brachet2012}, which could produce a positive effect of proportion of full-time nurse visits on hospital readmission.
+
+
+
+ \subsection{Firms' Assignment of Temporary and Permanent Nurses to Patients}
+
+Why do some patients receive more full-time nurse visits than others?
+Before investigating the impact of receiving more full-time nurse visits on readmission, I describe firms' practice of assigning nurses to patients, which drives the variation in the proportion of full-time nurse visits across patients.
+%the variation in patient's fraction of full-time nurse visits and the key sources of the variation. The exogenous source of this variation would serve as valid instruments in my empirical strategy later.
+Home health firms' assignment of nurses to patients is based largely on matching by distance as it involves mobile workforces.\footnote{The geography-based assignment of service providers to patients has been well noted in the home health care settings as well as in other mobile workforce settings, such as police. The operations management literature has long addressed this ``districting'' problem of how to partition a firm's service market region into a contiguous set of districts and assign workers to each district to minimize each worker's travel distances and equalize the workload across workers \citep{Tavares-Pereira2007}.
+}
+Since many nurses commute from home directly to patients' homes, firms try to assign to a patient the nurses who live close by to her in order to minimize nurses' travel time and costs.
+Travel time has the potential to affect not only directly firms' mileage payment to nurses but also indirectly employee retention \citep{Chapple2001} and labor supply \citep{Gutierrez-i-Puigarnau2010, Gimenez-Nadal2011}.
+This is despite the possibility that a nurse may incur one-time costs of traveling to and from a remote area at the beginning and end of the day and mostly travel short distances between different patients' homes located near each other during the day.  %From the agency's point of view, the shorter the travel distances and times are, the more cost efficient it is since workers spend less time on the road for the same level of visit productivity and offices save on mileage payment.
+
+In my data, for a given patient, nurses who actually visited the patient lived closer to her than other nurses who were active but did not visit her.
+Nurses who actually visited the patient lived 11 miles away whereas those who did not visit her lived 14 miles away.\footnote{To analyze this, for each patient, I divide nurses who were active during months of the patient's care into two groups by whether they actually visited her.
+Within the patient, I compute the mean distance to the nurses in each group at the 5-digit ZIP-code level, the finest level of geography I can obtain for the patients' and nurses' home addresses.}
+The mean difference of 3 miles within the patient is not only economically significant but also statistically significant at the one percent level according to the paired t-test.
+
+While matching of nurses with patients is largely based on distance, a majority of patient's care is provided by full-time nurses. On average, a patient receives 6 nurse visits in total. Approximately 60 percent of them are provided by full-time nurses; 8 percent by part-time with benefits nurses; 6 percent by part-time with benefits nurses; 17 percent by on-call nurses; 0.3 percent by contractor nurses; and 8 percent by office or other nurses.
+Figure~\ref{fig:fnv_st1_vartn} shows the variation in the proportion of full-time nurse visits across patient episodes. A large number of patients receive either zero or only full-time nurse visits. 24 percent of the patients receive zero full-time nurse visits, and 36 percent of patients receive only full-time nurse visits. The remaining 40 percent receive a mix of full-time nurse and other nurse visits, with the median proportion of full-time nurse visits being 0.75.
+
+%In particular, how do firms assign nurses in different work arrangements to patients?
+%Most of the patient visits are provided by full-time nurses, reflecting the firm-level distribution of nursing workforce across employment arrangements shown in Section~\ref{sec:desc_stats}.
+%Figure~\ref{fig:fnv_st1_vartn} shows that 36 percent of patients receive only full-time nurse visits with the median percentage of full-time nurse visits being 75 percent.
+%However, there are also a large percentage of patients who receive no full-time nurse visits. 24 percent of the patients receive zero full-time nurse visits.
+%What explains the difference in the percentage of full-time nurse visits across patients?
+%To understand determinants of this variation, I provide descriptive statistics on several patient characteristics by the percentage of full-time nurse visits in Table~\ref{}.
+%\todo{Create a table on pat characteristics across \% FTN visit categories}
+%
+
+
+
+
+
+\section{Data} \label{sec:data_ch1}
+
+I use rich and novel data from a large US for-profit freestanding home health provider firm operating 106 autonomous offices in 18 states during January 2012 through August 2015.\footnote{
+These 18 states are Arizona, Colorado, Connecticut, Delaware, Florida, Hawaii, Massachusetts, Maryland, North Carolina, New Jersey, New Mexico, Ohio, Oklahoma, Pennsylvania, Rhode Island, Texas, Virgina, and Vermont.}\footnote{This large set of independently run offices alleviates some concern about the generalizability of our results to other HHAs even if they all belong to one company. During 2013, compared to a national sample of freestanding agencies, home health offices in our sample tend to be larger, have a lower share of visits provided for skilled nursing and instead have a higher share of visits provided for therapy, and have a lower share of episodes provided to dual-eligible Medicare or Medicaid beneficiaries, which seem to be more common characteristics of proprietary agencies \citep{Cabin2014, MedPAC2016hh}.}
+These data provide information for each patient including underlying risk factors and outcomes at an unusual level of detail since the Center for Medicare and Medicaid Services (CMS) requires each office to collect extensive demographic and health risks data using the CMS's Outcome and Assessment Information Set (OASIS) surveys.\footnote{These patients include all the patients enrolled in both public and private versions of Medicare, Medicaid and a small fraction of private insured patients for which their plans required the collection of OASIS data.}
+The patient data contain a rich set of underlying health risks assessed at the beginning of each home health admission and hospital readmission outcomes.\footnote{The OASIS data actually contain two variables which I use to identify whether a patient had a hospital readmission: whether patients had a hospitalization prior to home health care and hospitalization dates during home health care.}
+I focus on hospital readmissions as a key measure of quality of care since both hospitals and freestanding HHAs view it as a key competitive differentiator among HHAs under the Hospital Readmissions Reduction Program (HRRP) established by the Affordable Care Act (ACA) \citep{Worth2014}.
+
+These data contain the entire home health visit records in each office showing all the interactions between a patient and individual providers who served her.
+I match these visit-level data with the human resources data containing the history of employment arrangements for each provider to measure the proportion of visits provided by nurses in each work arrangement during each patient's care.
+Using these visit-level data, I can also construct the firm-day level data showing office's demand and labor supply conditions. I use this dataset to construct the mean level of ongoing home health care episodes and active nurses, and the mean proportion of nurses in each work arrangement during each patient's care.
+
+Finally, my data provide 5-digit ZIP code level home addresses for both patients and nurses. It is rare to have home addresses for nurses in health care data, which offers a unique opportunity to construct an instrument based on the distance between patient and nurse's homes as described in Section~\ref{sec:instr_nearest}.
+
+I construct the sample at the patient episode level, where an episode is defined as a 60-day period of receiving home health services.\footnote{This definition of a 60-day home health episode is based on the fact that the Center for Medicare and Medicaid Services (CMS) pays a prospective payment rate for each episode to home health agencies for ``traditional Medicare'' (Part A) enrollees, not privately insured Medicare enrollees. A patient can have multiple episodes during a home health care admission.}
+Each patient episode is handled by a single office.
+Since each office autonomously decides scheduling and staffing and is run as a profit center, I regard each office as a separate ``firm'' in my empirical analysis.
+In my sample, I exclude firms that are senior living offices whose primary clientele is residents of senior living facilities since these firms pursue a different workforce configuration strategy than firms that focus on home health care.
+I also exclude firms serving fewer than 50 episodes in a ZIP code for stable estimation.
+Furthermore, I restrict to the set of patients who received a single episode of home health care since patients receiving multiple episodes likely face a different distribution of labor mix. I also exclude patients who received only one nurse visit since they cannot experience a mix of nurses in different work arrangements.
+I exclude outlier patients who received greater than 99th percentile (18) of the number of nurse visits during care.
+Thus, my final sample used for the analysis contains 21,200 patient episodes that live in 203 ZIP codes and are served by 39 firms operating in 10 states.
+
+
+
+%I restrict to single-episode home health admissions in all 108 offices. I exclude offices whose primary service is providing long-term shift-based case to adults with chronic illnesses or disability or providing personal care for activities of daily living.
+%Thus, my sample consists of offices that provide short-term, intermittent visits to adults for nursing, therapy, and personal care.
+
+
+
+
+
+
+\section{Inference Problem} \label{sec:est_prob}
+
+Estimating the effect of the proportion of full-time nurse visits on patient readmission is challenging for several reasons.
+The first and central problem is that firms' assignment of full-time nurses to patients may depend on patients' severity.
+Sicker patients are more likely to be assigned full-time nurses because those nurses can provide more continuous care or have more experience due to longer tenure.
+Section~\ref{sec:desc_diff_nurses} shows that full-time nurses work more per week and work longer.
+%This would be translated in the context of home health as preventing avoidable hospital readmissions.
+To the extent that patients who are sicker in unobserved dimensions have a higher proportion of full-time nurse visits, estimating an OLS effect of such a proportion on the patient readmission would result in an upward bias and work against finding a negative effect.
+
+Indeed patients who received a higher proportion of full-time nurse visits appear to be sicker according to many observed characteristics. Table~\ref{tab:severity_bylabormix} shows the mean values for several patient characteristics for four different groups of patients based on the proportion of full-time nurse visits: 1) zero; 2) greater than zero and less than median (0.75); 3) equal to or greater than median and less than one; and 4) one.
+Overall, Group 1 patients who received zero full-time nurse visits were most saliently healthier than Groups 2--4 of patients who had at least one full-time nurse visit during care.
+Panel B shows that Group 1 had a low risk for hospitalization: these patients had few past hospitalizations, did not show mental decline, and took few medications.
+In Panel C, Group 1 was older but more likely to be white and enrolled in Medicare Advantage, both of which have been shown to be associated with better health \citep{Kawachi2005, Brown2014}.
+In Panel D, Group 1 had a lower Charlson comorbidity index and was less likely to report severe overall status and have severe pre-home health care conditions.
+
+One can observe a similar gradient of severity across Groups 2--4.
+Groups 3--4 patients who had at least 75 percent of full-time nurse visits appeared similar, and Group 3 was even sicker than Group 4 on some measures. However, both of these groups tended to be sicker than Group 2 in many characteristics.
+In our estimation framework, we control for all of these observed patient severity characteristics. However, to the extent that these observed characteristics are correlated with unobserved characteristics, such as dynamic progression of severity during patient's care, the effect of full-time nurse visits on patient readmission cannot be identified.
+To address this problem, I use an instrument variables approach, which I describe in detail in Section~\ref{sec:emp_str}. This approach relies on activeness of full-time nurses in the patient's local area and the number of nearest full-time nurses who did not visit the patient as an exogenous source of variation.
+
+
+%The third problem is that handoffs are likely to be non-random because, first, home health agencies try to avoid care discontinuity for sicker patients, and second, sicker patients get more visits which separately increase the chance of handoffs.
+%\citet{David2017} recognize this problem and address the concern of non-random occurrence of handoffs and visits by using an exogenous variation coming from the inactivity of the last nurse who saw a patient.
+%Therefore, not only should I control for handoffs but also I should account for the endogenous nature of handoffs.
+%To address this problem, first, I control for the ratio of the number of handoffs to the total number of nurse visits during care. This helps prevent the potential mechanical increase in handoffs from more visits. Second, I will also use the instrument set to explain this ratio of handoffs to visits.
+%
+%A corollary of the third problem is that care intensity of itself is also correlated with unobserved patient severity and may affect the patient readmission if more intensive care prevents readmission. Moreover, it is correlated with the ratio of handoffs to visits, which may increase readmission.
+%To address this problem, I control for the total number of nurse visits and use the same instrument set to explain the variable.
+%
+%\graphicspath{ {/Users/kunheekim/Dropbox/Wharton/Dissertation/labormix/} }
+%\begin{figure}
+%\begin{minipage}{\linewidth}
+%\centering
+%\includegraphics[width=\linewidth, keepaspectratio]{lmix_quality_endog_diagm.png}
+%\footnotesize
+%\justify
+%\emph{Notes:}
+%The unit of observation is a patient episode. The vertical line denotes the median value, 0.75.
+%\end{minipage}
+%\caption[]%
+%{\small Diagram of the predicted signs of the effects of key endogenous variables and unobserved severity on patient readmission}
+%\label{fig:lmix_quality_endog_diagm.pdf}
+%\end{figure}
+%
+% \todo{come back and focus on the expected estimate of the effect of proportion of FTNV}
+%I summarize these estimation challenges in Figure~\ref{fig:lmix_quality_endog_diagm.pdf}.
+%To identify the effect of the proportion of full-time nurse visits on patient readmission, one must also control for the ratio of handoffs to visits and number of nurse visits, which are correlated with the proportion either directly or indirectly.
+%In addition, one must treat the endogeneity problem---i.e. omitted variable bias---arising from the correlation between each of the endogenous variable and unobserved patient severity.
+%Patients who are sicker in unobserved dimensions are independently likely to be readmitted to a hospital.
+%At the same time, they are likely to receive a higher proportion of full-time nurse visits, which may reduce the chance of readmission.
+%Sicker patients receive more continuous care and tend to get fewer handoffs, which would lower the risk of readmission.
+%Lastly, sicker patients are more likely to receive more intensive care, which would also reduce readmission.
+%The predicted lower risk of readmission through the endogenous variables counter the predicted higher risk of readmission for sicker patients.
+%Therefore, the OLS effect of the proportion of full-time nurse visits would likely work against finding a negative effect of full-time nurse visits on patient readmission.
+
+
+\section{Empirical Strategy} \label{sec:emp_str}
+
+%\subsection{Labor mix variation across firms}
+
+%\subsection{Labor Mix Variation}
+% Care Continuity and Intensity
+
+% inference problem
+To address the inference problem described in Section~\ref{sec:est_prob}, I use an instrumental variables method to estimate the labor mix on hospital readmission.\footnote{The description of my empirical analysis using the 2SLS estimation follows that done by \citet{DoyleJr2015}.}
+%The proportion of full-time nurse visits during patient care is simultaneously determined by handoffs and care intensity, both of which are likely influenced by unobserved patient severity. Thus, one should treat these two additional variables as endogenous variables along with the labor mix.
+I use the activeness of full-time nurses in the patient's ZIP code at the start of care, which yields a plausibly exogenous variation in the labor mix.
+% is affected by two forces. On the one hand, firms prefer to provide more intensive care to sicker patients, which could increase the risk of handoffs. On the other hand, firms  but also assign more full-time nurses who can improve care continuity due to longer tenure and improve treatment quality through longer experience.
+I describe this instrument in detail below.
+
+\subsection{Activeness of Full-Time Nurses}
+
+A single firm typically serves multiple ZIP codes, and naturally, there is a variation in the activeness of full-time nurses across ZIP codes.
+If a new patient needing home health care happens to live in a ZIP code where full-time nurses are originally active, then she would receive a higher fraction of full-time nurse visits.
+Therefore, the activeness of full-time nurses in the patient's ZIP code must have a strong positive correlation with her fraction of full-time nurse visits.
+
+%\todo{Describe instrument construction}
+To construct the instrument variable measuring the activeness of full-time nurses for each patient episode $i$, I use the share of total nurse visits in $i$'s ZIP code that are provided by full-time nurses hired by $i$'s firm at $i$'s start of care.
+For each $i$, let $f(i)$, $z(i)$, and $m(i)$ denote the firm that  serves her, the ZIP code she lives in, and the month of her start of home health care, respectively.
+Define $P_{\hat{i}}$ as the set of patients other than patient $i$ who have the vector of these three characteristics $(f(i), \ z(i), \ m(i))$, where the hat denotes omission. That is:
+$$P_{\hat{i}} := \{ j | j \ne i , \ (f(j), \ z(j), \ m(j)) =  (f(i), \ z(i), \ m(i))\}.$$
+%Denote the work arrangement by $w$ where
+Finally let $v_{j,w}$ be the number of nurse visits provided to each patient $j \in P_{\hat{i}}$ by nurses in work arrangement $w$.
+$w$ can be one of the six arrangements: 1) full-time, 2) part-time with benefits, 3) part-time without benefits, 4) on-call, 5) contractor, and 6) office/other.
+For each $i$, the activeness of full-time nurses is then defined as
+\begin{equation}
+Active_{i} = \frac{ \sum_{j \in P_{\hat{i}} } v_{j ,full-time} }{ \sum_w \sum_{j \in P_{\hat{i}} } v_{j,w} }.
+\end{equation}
+I exclude the given patient episode $i$ from this measure to avoid predicting the patient's fraction of full-time nurse visits using her own full-time nurses' visits. This leave-out method has been used in previous literature \citep{Angrist2009, DoyleJr2015}.
+
+
+%I rely on two variations
+The quasi-experimental set up here is comparing two patients served by the same firm in two different ways.
+The first comparison is cross-sectional---comparing two patients who started home health care at the same month but lived in different ZIP codes. Here one
+patient may have happened to live in a ZIP code area where full-time nurses were more active than other nurses.
+ The second comparison is cross-time---comparing two patients who lived in the same ZIP code but started in different months.
+Here one patient may have happened to start care when full-time nurses were more active.
+
+%A. Cross-Sectional Variation across ZIP Codes within Firm-Month Pairs
+% describe activity share variation across ZIP codes
+%I visualize these two variations exploited in the instruments.
+%First, I explore the cross-sectional variation in nurses' activeness.
+%Each firm in the same month usually serves multiple ZIP codes across which the patient episodes are widely distributed.
+%In my sample, a firm-month pair serves about 5 different ZIP codes on average (with the 10th percentile, the median, and the 90th percentile being 2, 3, and 10, respectively).
+%Within a firm-month pair, the mean concentration of patient episodes among ZIP codes, measured by the Herfindahl-Hirschman Index (HHI), is  0.35 (with the 10th percentile, the median, and the 90th percentile being 0.13, 0.34, and 0.59, respectively).\footnote{The HHI is constructed by summing at the firm-month level, the squared share of patient episodes served in each ZIP code. Then I compute the mean of HHIs across the firm-month pairs.}
+
+
+%% RESUME: Discuss IQR Graphs !!!!!!
+%\todo{interpret IQR graphs}
+%
+%Figure~\ref{fig:cov_activeness.pdf} shows that nurses' activeness varies across multiple ZIP codes each firm serves in the same month. This figure shows the office-month level distribution of the coefficients of variation (COVs) of nurses' activeness across multiple ZIP codes served by the office-month pair.\footnote{Nurses's activeness differs at the episode level due to excluding the number of visits provided in each episode for a office-month pair. Thus, I take a mean of the activeness measures across episodes to aggregate to the office-month-ZIP code level, and then compute a coefficient of variation at the office-month level.} It shows the COV separately for nurses in different work arrangements.
+%The COV in full-time nurses' activeness is smaller and concentrated towards less than one, indicating that a firm tends to evenly distribute full-time nurses across different ZIP codes.
+%In comparison, there is a more uneven distribution of nurses in other work arrangements.
+%However, the COV is greater than zero and features a distribution across values between zero and one.
+%this creates a sufficiently large variation in the proportion of full-time nurse visits during patient care, as to be shown in Section~\ref{}.
+
+I illustrate how these two variations in the activeness instrument explain the proportion of full-time nurse visits in Table~\ref{tab:activeness_predictivepower}.
+Panel A shows that in ZIP codes where full-time nurses were more active (i.e. above or equal to median), patients had 16 percentage points higher proportion of full-time nurse visits even within the same firm-month pairs.
+The median values are created for each firm-month pair using the patient's start-of-care month.
+%The columns (1) and (2) show the means and standard errors of the proportion of full-time nurse visits during patient care when the patients lived in ZIP codes with above and equal to or below the median activeness of nurses in each work arrangement, respectively.
+The difference is statistically significant at the one percent level by the $t$-test of the equality of the means.
+Panel B shows that when patients happened to start care in months during which full-time nurses were more active, they received 20 percentage points higher proportion of full-time nurse visits within the same firm-ZIP code pairs. This difference is also statistically significant at the one percent level.
+
+% \graphicspath{ {/Users/kunheekim/Dropbox/Wharton/Research/Labor/gph/JMP/} }
+%\begin{figure}
+%\begin{minipage}{\linewidth}
+%\centering
+%\includegraphics[width=\linewidth, keepaspectratio]{cov_activeness.pdf}
+%\footnotesize
+%\justify
+%\emph{Notes:}
+%The unit of observation is an office-month pair.
+%\end{minipage}
+%\caption[]%
+%{\small Coefficient of variation in nurses' activeness across ZIP codes within a firm-month pair}
+%\label{fig:cov_activeness.pdf}
+%\end{figure}
+
+
+%B. Across Time Within Firm-ZIP Code Pairs
+%Similarly, I explore the cross-time variation in nurses' activeness.
+%In my sample, a firm served 33 months in the same ZIP code on average (with the 10th percentile, median, and 90th percentile being 22, 34, and 41 months, respectively).
+%Figure~\ref{fig:cov_activeness_ts.pdf} shows a variation in nurses' activeness across months even within the same firm-ZIP code pair.
+%Similar to the cross-sectional variation, full-time nurses' activeness in a ZIP code features a smaller variation, indicating that firms tend to keep the similar level of full-time nurses' activeness in the same ZIP code. However, there is still a variation in the COV between zero and one.
+
+
+% \graphicspath{ {/Users/kunheekim/Dropbox/Wharton/Research/Labor/gph/JMP/} }
+%\begin{figure}
+%\begin{minipage}{\linewidth}
+%\centering
+%\includegraphics[width=\linewidth, keepaspectratio]{cov_activeness_ts.pdf}
+%\footnotesize
+%\justify
+%\emph{Notes:}
+%The unit of observation is an office-month pair.
+%\end{minipage}
+%\caption[]%
+%{\small Coefficient of variation in nurses' activeness across months within a firm-ZIP code pair}
+%\label{fig:cov_activeness_ts.pdf}
+%\end{figure}
+
+
+%
+%\subsection{Number of Preoccupied Nearest Full-Time Nurses} \label{sec:instr_nearest}
+%
+%In addition to the full-time nurses' activeness, I exploit the number of nearest full-time nurses who did not see the patient as a second source of exogenous variation in the proportion of full-time nurse visits.
+%As described in Section~\ref{sec:background_ch1}, a key determinant of assignment of nurses to patients is distance between the patients' and nurses' homes.
+%Therefore, while the nearest full-time nurses are the best candidates to serve the patient, if they did not see the patient at the start of care, she would tend to receive fewer full-time nurse visits.
+%Indeed the nearest full-time nurses who did not visit the patient during the month of her start of care lived closer to the patient than those who actually visited the patient.
+%On average, the nearest full-time nurses who did not visit the patient during the start-of-care month lived 3.8 miles away from the patient while those who visited the patient lived 11.9 miles away. The $t$-test of this mean difference is statistically significant at the one percent level.
+%
+%
+%To construct this instrument,
+%I use nurses' home addresses at the ZIP code level in the data. For each patient $i$, I measure the straight-line distance between the centroid coordinates of the patient's ZIP code and all the active nurses' ZIP codes during $i$'s start-of-care month. Then I count the number of full-time nurses who lived in the nearest ZIP code to $i$ but had not visited $i$. Call this instrumental variable $Preoccupied_i$.
+%
+%
+%Similar to the activeness instrument, I use the cross-sectional and cross-time variations.
+%Within the same firm-month pairs, did patients who happened to live in ZIP codes where many of their nearest full-time nurses did not serve them have a lower proportion of full-time nurse visits than patients in other ZIP codes?
+%Within the same firm-ZIP code pairs, did patients who happened to start care during which many of their nearest full-time nurses did not serve them have a lower proportion of full-time nurse visits than patients who started at different times?
+%
+%The second row of Table~\ref{tab:activeness_predictivepower} shows that
+%the proportion of full-time nurse visits was smaller when there were more nearest full-time nurses who were preoccupied and did not visit the patient at the start of care.
+%Although the difference in the proportion is smaller than that created by full-time nurses' activeness, it is statistically significant at the 5 percent level when compared between ZIP codes within the same firm-month pairs.
+%However, the difference in the proportion driven by the cross-time variation is not statistically significant.
+
+
+
+
+
+\subsection{Empirical Specifications} \label{sec:emp_spec}
+
+First, I model the first-stage relationships between the patient $i$'s proportion of full-time nurse visits $FTV_i$ and the instrument variable $Z_i$, $Active_{i}$, at the patient episode level. For each patient episode $i$ who is served by firm $f(i)$, lives in ZIP code $z(i)$, and has her home health care start in month $m(i)$ and end in time period $t(i)$, her proportion of full-time nurse visits $FTV_i$ is a function of the form:
+\begin{equation} \label{eq:iv1s}
+FTV_i =  \alpha_0 + \alpha_1 Z_i + \gamma X_i + \delta_{f(i)} + \zeta_{z(i)} +  \eta_{m(i)} + \theta_{t(i)} + \nu_{i, f(i), z(i), m(i), t(i)}.
+\end{equation}
+The vector $X_i$ includes observed patient characteristics including the number of nurse handoffs, total number of nurse visits, mean interval of nurse visits (i.e. mean number of days between two consecutive nurse visits), a set of firm level service demand and labor demand characteristics, a set of hospitalization risk controls, a set of demographic controls, and a set of comorbidity controls.
+The set of firm level service demand and labor demand controls includes mean of firm-day level variables capturing the caseload and labor supply conditions in each firm across the patient's home health days. The firm-day level variables include the number of ongoing episodes, the number of active nurses, and the fraction of active piece-rate nurses working in an firm-day cell.
+The set of hospitalization risk controls represents a set of indicator variables associated with high risk of hospitalization, and includes history of 2 or more falls in the past 12 months, 2 or more hospitalizations in the past 6 months, a decline in mental, emotional, or behavioral status in the past 3 months, currently taking 5 or more medications, and others.
+The set of demographic controls includes six 5-year age group dummies for ages ranging from 65-94 (age 95 or higher is an omitted group), gender, race, insurance type, an indicator for having no informal care assistance available, and an indicator for living alone.\footnote{Insurance types include Medicare Advantage (MA) plans with a visit-based reimbursement, MA plans with an episode-based reimbursement, and dual eligible with Medicaid enrollment (reference group is Medicare FFS).
+%In the data, MA plans make per-visit payments to 75\% of episodes and per-episode payments to 25\% of episodes.
+}
+The set of comorbidity controls includes a Charlson comorbidity index, indicators for overall health status, indicators for high-risk factors including alcohol dependency, drug dependency, smoking, obesity, and indicators for conditions prior to hospital stay within past 14 days including disruptive or socially inappropriate behavior, impaired decision making, indwelling or suprapublic catheter, intractable pain, serious memory loss and/or urinary incontinence.\footnote{Indicators for overall health status include indicators for very bad (patient has serious progressive conditions that could lead to death within a year), bad (patient is likely to remain in fragile health) and temporarily bad (temporary facing high health risks).
+}
+$\nu_{i, f(i), z(i), m(i), t(i)}$ is an idiosyncratic error.
+
+
+Controlling for the number of handoffs and total number of nurse visits in the regression equation is important.
+Experiencing a mix of permanent and temporary labor during patient care inevitably involves switching of providers or ``handoffs,'' which may independently affect the patient outcome.
+Fewer handoffs mechanically lead to either one or zero proportion of full-time nurse visits: this is illustrated in Table~\ref{tab:severity_bylabormix} with much smaller ratio of handoffs to nurse visits for Groups 1 and 4, who received zero and 100 percent of full-time nurse visits, respectively.
+\citep{David2017} find nurse handoffs---defined as being visited by a different nurse than the last one---to substantially increase the probability of readmission.\footnote{Although handoffs are found to be an important determinant of readmission in \citep{David2017}, I do not treat it as an endogenous variable to be instrumented for in this specification. The reason is that my instrument for the proportion of full-time nurses poorly capture the variation of handoffs. Since the causal effect of handoffs is not of main interest in this paper, I just control for it as an explanatory variable.}
+In addition, sicker patients may receive more nurse visits, which affects the proportion of full-time nurse visits and the likelihood of readmission.
+
+
+
+%Finally, I control for firm fixed effects $\alpha_k$, patient's ZIP code fixed effects $\eta_z$, and end-of-care time fixed effects $\mathbf{D_t}$.
+%The firm fixed effects remove time-constant office-specific or geographic differences in hospital readmissions, for example, through different hospital policies or state regulations concerning patient readmissions, such as states with Certificate-of-Need (CON) laws imposing home health entry restriction \citep{Polsky2014}.
+%The ZIP code fixed effects prevent getting spurious results due to the possibility that patients living in particularly remote areas are much more likely to get rehospitalized instead of getting home health intervention even in the same office.
+%In the vector $\mathbf{D_t}$ of end-of-care time fixed effects, I include indicators for each day of week (6 dummies), week of the year (51 dummies depending on the year), and indicators for year (3 dummies). This vectors controls for any time-constant effects related to the timing of the patient's episode which affects rehospitalization, such as holiday week or weekend.
+%
+
+
+
+I also include a set of fixed effects for firm, patient ZIP code, start-of-care month, and end-of-care time period, where the time period refers to the day of week (6 dummies), week of year (52 dummies), and year (4 dummies).
+%loc partial1 i.dow i.wkofyr i.yr i.offid_nu i.patzip
+ Therefore, this estimation compares patients in two ways, as explained above.
+First, it compares patients who were served by the same firm, started care in the same month and ended home health care at the same time but lived in different ZIP codes having a different level of activeness or preoccupied nearest full-time nurses.
+Second, the regression compares
+patients who were served by the same firm, lived in the same ZIP code, and ended home health care at the same time but had a different level of activeness or preoccupied nearest full-time nurses at the start of care.
+
+The main estimating model for the second-stage relationship between the proportion of full-time nurse visits and patient readmission takes the form
+\begin{equation} \label{eq:iv2s}
+Readmit_i = \beta_0 + \beta_1 FTV_i + \gamma X_i + \delta_{f(i)} + \zeta_{z(i)} + \eta_{m(i)} + \theta_{t(i)} + \epsilon_{i, f(i), z(i), m(i), t(i)}.
+%\var{Readmit_{ikzt}} = \beta_1 \var{LM_{ik}} + \beta_2 V_{ik} + \beta_3 H_{ik} + \mathbf{X'_{ik}} \delta_1 +  \mathbf{W'_{ik}} \delta_2 + \mathbf{D'_t} + \alpha_k + \eta_z + \epsilon_{ikzt}
+\end{equation}
+where $Readmit_i$ is an indicator variable for hospital readmission of a patient episode $i$. I compare the OLS estimation of equation~\ref{eq:iv2s} with its 2SLS estimation using the instruments explained above.
+This comparison will show the importance of taking into account the non-random assignment of full-time nurse visits in identifying the effect of labor mix on patient readmission.
+ I estimate a linear probability model.
+
+%The readmission probability is a function of a vector of the composition of nurses serving the patient $LM_{is}$;
+%the total number of nurse visits during the patient's episode $V_{ik}$;
+%the number of nurse handoffs $H_{ik}$ (i.e. frequency of nursing provider switches);
+%a vector of patients' observable characteristics $\mathbf{X_{ik}}$;
+%a vector of office characteristics $\mathbf{W_{ik}}$;
+%a vector of time level variables $\mathbf{D_t}$;
+%firm fixed effects $\alpha_{k}$ and patients' ZIP code fixed effects $\eta_{z}$; and an unobserved idiosyncratic disturbance $\epsilon_{ikzt}$.
+%The key coefficient I want to estimate is $\beta_1$.
+
+%The identification assumption is that the marginal effect of the proportion of visits by full-time nurses on the likelihood of rehospitalization does not vary in unobserved dimensions after controlling for observed variables.
+%However, there is a potential concern that the composition of visits between salaried and temporary nurses may be endogenous, i.e. patients who receive a higher proportion of full-time nurse visits may be different in aspects unobserved to the econometrician.
+%On the one hand, to the extent that patients with greater unobserved severity get more visits and are more likely to see piece-rate nurses in addition to salaried nurses, the OLS estimate of $\beta_1$ could be biased downward. Then the effect of increasing the proportion of full-time nurse visits on preventing rehospitalization would be overstated.
+%I address this issue, however, by controlling for the number of nurse visits and handoffs during the patient's episode.
+%On the other hand, the OLS estimate of $\beta_1$ could be biased upward to the extent that sicker patients are assigned to full-time nurses, who are more experienced as shown in Table~\ref{tab:lmix_quality_summ}. Then this bias would work against finding any negative effect of an increase in the proportion of full-time nurse visits on the hospital readmissions.
+%
+%Moreover, the total number of nurse visits and handoffs are independently likely to be endogenous since patients who get dynamically sicker during the episode would get more intensive treatment, i.e. higher number of nurse visits, and receive more continuous care, i.e. fewer number of handoffs.
+%\citet{David2016} have acknowledged the potential effects of unobserved dynamic severity on the likelihood of having a nurse visit and handoffs, and show that once controlling for whether a patient gets a visit, experiencing nurse handoffs increases the likelihood of rehospitalization by 42\% \citep{David2016}. To isolate the effect of labor mix on hospital readmissions from these separate channels, I control for the number of nurse visits and handoffs and instrument them using the same set of instruments as for the proportion of nurse visits.
+%
+%
+%To address the endogeneity concern, I instrument for the proportion of full-time nurse visits and total number of visits and handoffs using four sets of instruments representing patients' geographic distance to the three nearest full-time and on-call nurses, the number of those nearest nurses and their productivity.
+%With these measures, the identification assumption becomes that patients having a higher proportion of visits by full-time nurses, more nurse visits, and more nurse handoffs, as measured by the instrument set, do not have a different distribution of severity.
+
+
+
+
+%Most patients were served by salaried nurses during their home health care during the sample period.
+%Table~\ref{tab:summstats_diffoutc_byempst_hosp} shows that a majority, 62\%, of the patients are served by salaried nurses only, and a further 23\% of patients have more than 50\% of their nurse visits provided by salaried workers.
+%Only 10\% of the patients are served exclusively by piece-rate paid nurses.
+%Compared to patients who are served by either type of nurses only, we use a variation in the proportion of nurse visits by piece-rate workers among the  28\% of the patients to examine whether this variation is positively associated with the probability of rehospitalization.
+
+
+%%  RESUME~!!!!!
+
+\subsection{Potential Limitations} \label{sec:ch1_limit}
+
+There are potential concerns about the instruments.
+First, there could be unobserved ZIP code-month level shocks that are correlated with  the full-time nurses' activeness and the patient readmission. For example, do demographic changes such as a surge in the elderly population in a given ZIP code-month pair affect both full-time nurses' activeness and patient readmission?
+A lack of availability of such high-frequency ZIP code level information makes it hard to directly control for these relevant ZIP code-month level controls.
+However, for example, if an elderly population grows in a ZIP code in a given month, the omitted variable bias is expected to work against finding a negative effect of full-time nurse visits on readmission.
+The reason is that full-time nurses would become more active due to increased home health care demand while the readmission would be more likely among the elderly.
+
+Second, firms may selectively admit patients into home health care based on the full-time nurses' activeness.
+To the extent that firms admit healthier patients into home health care when full-time nurses were more active, I will likely overstate the negative effect of full-time nurse visits on patient readmission.
+To allay this concern, I investigate the balancing of observed characteristics by whether the patient had high or low activeness of full-time nurses.  High values are marked by whether the activeness is above or equal to median.
+Table~\ref{tab:balance} reports the mean values of regression controls for the two groups of patients.
+The first row in Panel A shows that when full-time nurses are more active, patients' proportion of full-time nurse visits is higher, as expected.
+%Note that the monotonic relationship between the proportion of full-time nurse visits and the instruments satisfies the monotonicity assumption required to interpret our 2SLS estimates as a local average treatment effects (LATE) \citep{Angrist1994}.
+When patients had high activeness of full-time nurses, they had nearly double the proportion of full-time nurse visits in column (2) by 40 percentage points, compared to patients who had low activeness in column (1).
+The hospital readmission rate is also greater for patients with high activeness of full-time nurses.
+Simultaneously, the hospitalization risk factors in Panel C and comorbidity characteristics in Panel E show that patients with high activeness of full-time nurses were indeed sicker.
+On average, these patients had higher Charlson comorbidity index and higher likelihood of having their overall status to remain in fragile health.
+Thus, I can refute the concern that firms may selective admit healthier patients when full-time nurses are more active.
+It was rather the opposite: firms tended to admit sicker patients when full-time nurses were more active, which works against finding a negative effect of full-time nurse visits on readmission.
+
+
+
+\section{Results} \label{sec:results_ch1}
+
+%Before showing the IV regression results, I present Table~\ref{tab:lmix_quality_summ} for the summary statistics for the sample of patients used in my analysis of the effects of labor mix on quality of care.
+%I use 11,433 patient episodes who had at least 2 skilled nurse visits during the episode.
+
+
+\subsection{First-Stage Results on the Proportion of Full-Time Nurse Visits}
+Table~\ref{tab:iv_onquality_firststage} shows the first-stage results on the relationship between the proportion of full-time nurse visits and my instrument---full nurses' activeness in the patient's ZIP code---in equation~\eqref{eq:iv1s}.
+Standard errors in these models are clustered at both the firm and patient ZIP code levels.
+
+In column (1), I begin by estimating the equation with fixed effects for each firm and ZIP code, respectively, and end-of-care time fixed effects for the week of year, year, and day of week. I also control for the number of nurse handoffs, total number of nurse visits, mean interval of nurse visits and office-week level overall demand and labor supply characteristics.
+I incrementally control for more patient characteristics in columns (2)--(4).
+
+There is a strong correlation between the patient's proportion of full-time nurse visits and my instrument, as shown by the statistically significant correlations at the one percent level and large F-statistic values of around 300.
+In column (4) for the richest specification, when full-time nurses were more active in the patient's ZIP code during the start-of-care month by one standard deviation (0.26), she received 16 percentage points or 26 percent higher proportion of full-time nurse visits given the mean of 0.6.\footnote{A 26-percent increase is obtained by multiplying the one standard deviation, 0.26, by the coefficient estimate 0.608 and dividing by the mean proportion of full-time nurse visits 0.6 (with the final number multipled by 100 for the percentage).}
+% 0.60* 0.26 = .156
+% .156  / 0.60 = .26
+This would translate to nearly one more full-time nurse visit during her care which involved six total nurse visits on average.
+%(.156)*6 = .94848
+
+
+
+
+\subsection{Second-Stage Results on Patient Readmission}
+
+
+I begin with the OLS estimation of the effect of the proportion of full-time nurse visits on patient readmission in equation~\eqref{eq:iv2s}.
+Panel A shows that the proportion of full-time nurse visits is negatively correlated with an indicator for hospital readmission: patients receiving a one-standard-deviation higher proportion of full-time nurse visits (0.41) were 0.4 percentage points or 2 percent less likely to be readmitted given the mean readmission rate of 0.2.
+% 0.41*(-0.009) = -.00369
+% -.00369 / 0.20 = -.01845
+However, this effect is not statistically significant even at the 10 percent level in all columns.
+This result reflects the upward bias I described in Section~\ref{sec:est_prob}, which likely occurs since sicker patients tended to have a higher proportion of full-time nurse visits.
+Indeed, the coefficient decreases twofold from column (1) to (2), and threefold from column (1) to (4). This pattern corroborates that sicker patients in terms of hospitalization risk controls, demographic controls and comorbidity controls were systematically assigned a higher proportion of full-time nurse visits while those patients were independently more likely to be readmitted.
+
+Panel B shows the 2SLS estimates using the first-stage results from Table~\ref{tab:iv_onquality_firststage}.
+There is a stronger negative correlation between the proportion of full-time nurse visits and hospital readmission by almost four times.
+The effects are statistically significant at the ten percent level once hospitalization risk, demographic, and comorbidity controls are included in columns (2)--(4).
+The rise of statistical significance reflects, shown in Section~\ref{sec:ch1_limit}, that sicker patients were more likely to be admitted when full-time nurses were active---which works against estimating a negative effect of full-time nurse visits on readmission.
+This pattern also contributes to reducing the precision of the estimates.
+On the other hand, the estimated effects of full-time nurse visits on readmission can be viewed as conservative.
+From the richest specification in column (4), I find that patients having a one-standard-deviation (0.41) higher proportion of full-time nurse visits or about 2 more full-time nurse visits were 1.4 percentage points or 7 percent less likely to be readmitted.
+% 0.41*(-0.035) = -.01435
+% -.01435 / 0.20 = -.07175
+
+
+%\subsection{Effects of Nurses in Alternative Work Arrangements on Readmission}
+%The main results indicate that receiving more visits by nurses other than full-time nurses leads to a higher likelihood of hospital readmission.
+%To investigate which alternative work arrangement contributes to this quality difference, I examine the impact of care by nurses in two dominant alternative work arrangements on patient readmission using the same instruments: part-time nurses with benefits and on-call nurses.\footnote{The proportion of visits by nurses in other alternative work arrangements was too small or showed too little variation to be estimated by a 2SLS estimator.}
+%
+%Table~\ref{tab:iv_onquality_2s_other} shows the first- and second-stage IV results for part-time nurses with benefits and on-call nurses in Panels A and B, respectively.
+%The same set of instruments have strong correlation with the proportion of visits by nurse in each of these arrangements, albeit not as strong as for full-time nurses.
+%In both panels, the first-stage results show that both instrumental variables have statistically significant associations with the proportion of nurse visits, and F-statistic values are above 10.
+%
+%In both panels, the second-stage results show that receiving higher proportion of visits by part-time nurses with benefits and on-call nurses increased the likelihood of hospital readmission.
+%Particularly, patients receiving more on-call nurse visits were substantially more likely to be readmitted than patients receiving more part-time nurse visits.
+%Patients having a one-standard-deviation (0.25) higher proportion of part-time nurse visits or about 1 more part-time nurse visits during care were 28 percentage points or 138 percent more likely to be readmitted.
+% 0.25*(1.101) = .27525
+% .27525 / 0.20 = 1.37625
+%Patients having a one-standard-deviation (0.30) higher proportion of on-call nurse visits or about 2 more on-call nurse visits during care were 41 percentage points or 206 percent more likely to be readmitted.
+% 0.30*(1.372) = .4116
+% .4116 / 0.20 = 2.058
+
+
+
+
+\section{Conclusion} \label{sec:conclusion_ch1}
+
+Alternative work arrangements are becoming increasingly popular modes of labor contracts in many industries due to the appeal of the flexibility and potential labor cost reductions.
+Health care, a labor-intensive service industry facing demand uncertainty, particularly has experienced one of the largest increases in the use of alternative work arrangements over the past two decades.
+These arrangements might be particularly necessary for supplementing labor supply in the presence of state regulations of the minimum nurse staffing levels and staffing shortages \citep{Tong2011, Cook2012, Mark2013, Lin2014, Matsudaira2014}.
+% http://whatworksforhealth.wisc.edu/program.php?t1=22&t2=17&t3=90&id=598
+Therefore, it is crucial to understand whether providers hired in traditional and alternative work arrangements lead to any difference in the quality of care and performance.
+
+However, estimating this hypothesis is challenging due to confounding factors and non-random matching of patients and providers in particular work arrangements, as described above.
+Home health care and the dataset I use provide an ideal opportunity to overcome these challenges and investigate the effect of full-time nurse visits on patient readmission.
+Home health is also an important market to study as it is one of the fastest growing sectors of health care, and is a sector in which a large proportion of the workforce is hired in alternative work arrangements.
+
+I find that patients receiving a higher proportion of full-time nurse visits were less likely to be readmitted.
+This finding is obtained by exploiting an exogenous variation across ZIP codes and care timings in the proportion of full-time nurse visits from full-time nurses' activeness.
+Moreover, this effect holds after controlling for patients' underlying health characteristics, office-level demand and labor supply characteristics, patients' ZIP code fixed effects, firm fixed effects, month fixed effects and fixed effects related to the timings of the start and end of care.
+%Finally, among alternative work arrangements, I also find that patients receiving more visits by part-time nurses with benefits and on-call nurses were more likely to be readmitted. Particularly, on-call nurse visits substantially increased the likelihood of readmission.
+
+My findings suggest that increasing the use of full-time nurses can improve the quality of care. % despite a lack of flexibility and high cost associated with full-time nurses.
+%Even though part-time nurses with benefits may be considered a close substitute to full-time nurses, I find that increasing the use of part-time nurses increased the likelihood of hospital readmission. The same finding holds for on-call nurses.
+It will be a fruitful target for policymakers and providers to focus on understanding the determinants of and reducing the gap in quality provided by nurses in different work arrangements.
+Consequently, future work on the specific mechanisms underlying my finding is critical. If experience were an important determinant of quality difference between full-time nurses and others, it is crucial to investigate nurses' learning curve, which also has broader implication on the choice of work arrangements and the value of retention.
+Furthermore, future work on the variation in the gap in quality of care among nurses in different work arrangements across different firms is crucial. Organizational learning by doing on the management and configuration of alternative work arrangements will provide valuable insights.
+%While my instruments create a plausibly exogenous variation in the proportion of full-time nurse visits across patients with remaining patient characteristics well balanced, there is one limitation for my empirical approach.
+%There might be time-varying shocks at the patient's local area level that affect both full-time nurses' activeness and hospital readmission.
+%It would be
+
+
+% bibliography ---------------------------------------------
+\newpage
+
+\bibliography{\myreferences}{}
+\bibliographystyle{te}
+
+%---------------------------------------------
+
+\begin{singlespace}
+
+
+\newpage
+
+\graphicspath{ {/Users/kunheekim/Dropbox/Wharton/Research/Labor/gph/JMP/} }
+% \begin{figure}[H]
+% \begin{minipage}{\linewidth}
+% \centering
+% \includegraphics[width=0.5\linewidth, keepaspectratio]{fnv_st1_vartn.pdf}
+% \footnotesize
+% \justify
+% \emph{Notes:} The unit of observation is a patient episode. The vertical line denotes the median value, 0.75.
+% \end{minipage}
+% \caption[Variation in the Proportion of Full-Time Nurse Visits across Patient Episodes]%
+% {\small Variation in the Proportion of Full-Time Nurse Visits across Patient Episodes}
+% \label{fig:fnv_st1_vartn}
+% \end{figure}
+
+
+
+
+
+
+
+\newpage
+\begin{table}[H]
+\footnotesize
+\setlength\tabcolsep{5pt}
+\centering
+\caption{Labor Supply and Pay Characteristics of Nurses by Work Arrangements}
+\label{tab:diff_nurses}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}c}
+%|p{20mm} |p{20mm} |p{20mm} |p{20mm}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+& Full-time & \shortstack{Part-time\\with\\benefits} & \shortstack{Part-time\\without\\ benefits} & On-call & Contractor & \shortstack{Office/\\Other}  \\
+\midrule
+ \multicolumn{7}{l}{A. Labor supply characteristics per week} \\
+Number of visits  & 21.84  & 15.93  & 14.53  & 8.93  & 6.46  & 10.76 \\
+%Number of visit points  & 24.48  & 17.99  & 16.25  & 10.21  & 6.47  & 12.14 \\
+Number of days worked  & 4.95  & 4.51  & 4.35  & 3.45  & 2.27  & 3.40 \\
+Total time spent on visits (hours)  & 16.16  & 12.15  & 11.49  & 6.94  & 5.57  & 8.24 \\
+Mean visit length (hours)  & 0.77  & 0.79  & 0.80  & 0.84  & 0.87  & 0.85 \\
+Length of employment (months)  & 21.18 & 24.41 & 28.29 & 16.29 & 5.18 & 8.33 \\
+\\
+\multicolumn{7}{l}{B. Pay characteristics} \\
+Pay scheme & Salary & Salary & Salary & Piece rate & Piece rate & Salary \\
+Total weekly pay (\$)  & 1,239.27  & 819.25  & 711.91  & 445.06  &   &  \\
+Per visit rate (\$) & 43.77  & 42.30  & 42.70  & 55.80 &  & \\
+%\% visit productivity goals met  & 83.91  & 94.89  & 105.54 &  &  &      \\
+%Visit productivity  & 28.43  & 19.33  & 16.61 &  &  &   \\
+\bottomrule
+\end{tabular}
+	\begin{tablenotes}[para,flushleft]
+	\footnotesize
+	\item \emph{Notes.} The first four variables in Panel A are obtained using weeks during which the nurses provided at least one visit.
+	The length of employment in Panel A is measured for nurses who terminated their employment, where the termination is defined as either permanently exiting the workforce or providing no visits for more than 90 consecutive days.
+	For the pay scheme in Panel B, salary is defined as a fixed amount of pay for the specific expected number of visits per week, and piece rate as a fixed rate per visit. Salaried nurses are eligible for benefits, except part-time nurses without benefits in column (3); piece-rate paid ones are ineligible.
+	\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+\newpage
+\begin{table}[H]
+\footnotesize
+\setlength\tabcolsep{1pt}
+\centering
+\caption{Patient Severity and the Proportion of Full-Time Nurse Visits}
+\label{tab:severity_bylabormix}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}c}
+%|p{20mm} |p{20mm} |p{20mm} |p{20mm}}
+\toprule
+ & (1) & (2) & (3) & (4) \\
+Proportion of full-time nurse visits & 0 & \shortstack{Greater than 0\\and less than\\median} & \shortstack{At least\\median and\\ less than 1}   & 1  \\
+%Full-time nurse visit & 0\% & Greater than 0\% \newline and up to 50\% & Greater than 50\% and less than 100\%  & 100\%  \\
+\midrule
+
+\multicolumn{5}{l}{A. Key endogenous determinants of the patient readmission}\\
+Proportion of full-time nurse visits & 0.00  & 0.43  & 0.82  & 1.00 \\
+Ratio of handoffs to nurse visits & 0.11  & 0.43  & 0.33  & 0.15 \\
+Number of nurse visits & 5.61  & 5.92  & 7.20  & 5.42 \\
+Mean number of days between two consecutive visits & 4.86  & 4.78  & 4.88  & 5.32 \\
+%Indicator for hospital readmission  & 0.20  & 0.22  & 0.16  & 0.20 \\
+
+\\
+\multicolumn{5}{l}{B. Hospitalization risk factors}\\
+Risk for hospitalization: History of 2+ falls & 0.26  & 0.25  & 0.26  & 0.26 \\
+Risk for hospitalization: 2+ hospitalizations & 0.35  & 0.40  & 0.43  & 0.40 \\
+Risk for hospitalization: Recent mental decline & 0.06  & 0.07  & 0.07  & 0.08 \\
+Risk for hospitalization: Take 5+ medications & 0.87  & 0.88  & 0.88  & 0.89 \\
+Risk for hospitalization: Other & 0.07  & 0.11  & 0.08  & 0.10 \\
+
+\\
+\multicolumn{5}{l}{C. Demographic characteristics}\\
+Age & 79.24  & 78.39  & 78.82  & 78.92 \\
+Female & 0.58  & 0.59  & 0.61  & 0.62 \\
+White & 0.83  & 0.80  & 0.79  & 0.77 \\
+Enrolled in per-visit paying Medicare Advantage & 0.22  & 0.17  & 0.16  & 0.17 \\
+Enrolled in per-episode paying Medicare Advantage & 0.08  & 0.04  & 0.04  & 0.04 \\
+Dual eligible & 0.00  & 0.01  & 0.01  & 0.01 \\
+No assistance available & 0.02  & 0.02  & 0.02  & 0.02 \\
+Living alone & 0.23  & 0.23  & 0.26  & 0.25 \\
+\\
+\multicolumn{5}{l}{D. Comorbidity characteristics}\\
+Overall status having serious progressive conditions (Very bad) & 0.02  & 0.03  & 0.04  & 0.04 \\
+Overall status likely to remain in fragile health (Bad) & 0.27  & 0.29  & 0.30  & 0.32 \\
+Overall status temporarily facing high health risks (Less bad) & 0.63  & 0.59  & 0.60  & 0.58 \\
+High risk factor: Alcohol dependency & 0.03  & 0.02  & 0.02  & 0.03 \\
+High risk factor: Drug dependency & 0.01  & 0.01  & 0.01  & 0.01 \\
+High risk factor: Heavy smoking & 0.13  & 0.13  & 0.13  & 0.14 \\
+High risk factor: Obesity & 0.17  & 0.19  & 0.18  & 0.16 \\
+Pre-home health condition: Disruptive behavior & 0.01  & 0.01  & 0.01  & 0.01 \\
+Pre-home health condition: Impaired decision-making & 0.12  & 0.15  & 0.14  & 0.17 \\
+Pre-home health condition: Indwelling/Suprapublic catheter & 0.02  & 0.02  & 0.02  & 0.01 \\
+Pre-home health condition: Intractable pain & 0.12  & 0.12  & 0.09  & 0.11 \\
+Pre-home health condition: Memory loss & 0.10  & 0.10  & 0.10  & 0.12 \\
+Pre-home health condition: Urinary incontinence & 0.27  & 0.29  & 0.30  & 0.31 \\
+
+\\
+\multicolumn{5}{l}{E. Other characteristics}\\
+%Indicator for hospital readmission & 0.20  & 0.22  & 0.16  & 0.20 \\
+Length of care (in days) & 24.42  & 25.14  & 31.05  & 25.36 \\
+Total number of unique nurses seen & 1.46  & 2.82  & 2.65  & 1.58 \\
+Number of physical therapy visits & 4.26  & 4.14  & 4.66  & 4.36 \\
+Number of occupational therapy visits & 1.22  & 1.35  & 1.59  & 1.46 \\
+Number of speech therapy visits & 0.22  & 0.27  & 0.32  & 0.30 \\
+Number of home health aide visits & 0.60  & 0.66  & 0.83  & 0.59 \\
+
+\midrule
+Number of observations & 4,975 & 4,927 & 3,672 & 7,626\\
+%Proportion of full-time nurse visits & 0.00 & 0.32 & 0.77 & 1.00 \\
+%Ratio of handoffs to nurse visits  & 0.12 & 0.42 & 0.37 & 0.15 \\
+%Number of nurse visits  & 5.59 & 5.77 & 6.81 & 5.39 \\
+%Length of care (in days) & 24.43 & 24.59 & 29.44 & 25.28 \\
+%
+%Risk for hospitalization: 2+ hospitalizations & 0.35 & 0.40 & 0.42 & 0.40 \\
+%Risk for hospitalization: Recent decline in Mental & 0.06 & 0.07 & 0.07 & 0.08 \\
+%Risk for hospitalization: Take 5+ medications & 0.87 & 0.88 & 0.88 & 0.89 \\
+%Age & 79.23 & 78.33 & 78.73 & 78.94 \\
+%Female & 0.58 & 0.59 & 0.61 & 0.61 \\
+%White & 0.83 & 0.80 & 0.79 & 0.78 \\
+%Enrolled in per-visit paying Medicare Advantage & 0.22 & 0.16 & 0.17 & 0.17 \\
+%Enrolled in per-episode paying Medicare Advantage & 0.08 & 0.04 & 0.04 & 0.04 \\
+%Dual eligible & 0.00 & 0.01 & 0.01 & 0.01 \\
+%Charlson comorbidity index & 0.61 & 0.67 & 0.70 & 0.67 \\
+%Overall status: (Very bad) Progressive conditions & 0.03 & 0.03 & 0.04 & 0.04 \\
+%Overall status likely to remain in fragile health & 0.27 & 0.30 & 0.29 & 0.32 \\
+%Overall status: Temporarily facing high health risks & 0.63 & 0.58 & 0.60 & 0.58 \\
+%High risk factor: Obesity & 0.17 & 0.20 & 0.17 & 0.16 \\
+%Pre-HHC condition: Disruptive behavior & 0.01 & 0.01 & 0.01 & 0.01 \\
+%Pre-HHC condition: Impaired decision-making & 0.12 & 0.15 & 0.14 & 0.17 \\
+%Pre-HHC condition: Indwelling/Suprapublic catheter & 0.02 & 0.02 & 0.02 & 0.01 \\
+%Pre-HHC condition: Intractable pain & 0.12 & 0.13 & 0.09 & 0.11 \\
+%Pre-HHC condition: Memory loss & 0.10 & 0.09 & 0.10 & 0.12 \\
+%Pre-HHC condition: Urinary incontinence & 0.27 & 0.31 & 0.29 & 0.31 \\
+%Indicator for hospital readmission & 0.20 & 0.23 & 0.18 & 0.20 \\
+\bottomrule
+\end{tabular}
+	\begin{tablenotes}[para,flushleft]
+	\footnotesize
+	\item \emph{Notes.} The median proportion of full-time nurse visits is 0.75.
+	\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+\newpage
+\begin{sidewaystable}[H]
+\footnotesize
+\setlength\tabcolsep{7pt}
+\centering
+\caption{Mean Proportion of Full-Time Nurse Visits by Full-Time Nurses' Activeness in the Local Area at the Start of Care}
+\label{tab:activeness_predictivepower}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}c}
+%|p{20mm} |p{20mm} |p{20mm} |p{20mm}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5)  & (6) \\
+& \multicolumn{3}{c}{A. Within firm-month pairs} &  \multicolumn{3}{c}{B. Within firm-ZIP code pairs} \\
+\cmidrule(r{2pt}l{2pt}){2-4} \cmidrule(r{2pt}l{2pt}){5-7}
+Instrument                 & \shortstack{Above or equal\\ to median}                                          & \shortstack{Below\\ median} & \shortstack{Difference\\(1) - (2)}       & \shortstack{Above or equal\\ to median}                                          & \shortstack{Below\\ median} & \shortstack{Difference\\(4) - (5)} \\
+\midrule
+\\
+Full-time nurses' activeness                                   & 0.69 & 0.53 & 0.16*** & 0.72 & 0.51 & 0.20*** \\
+%\\
+%\shortstack{Number of preoccupied\\nearest full-time nurses} & 0.61 & 0.63 & -0.03** & 0.60  & 0.61 & -0.01     \\
+%Full-time nurses           & 0.78                                                  & 0.51                     & 0.27***                    & 0.79         & 0.45                     & 0.34***              \\
+%                           & (0.006)                                               & (0.009)                  & (0.010)                    & (0.010)      & (0.017)                  & (0.020)              \\
+%Part-time with benefits    & 0.37                                                  & 0.55                     & -0.19***                   & 0.43         & 0.63                     & -0.20***             \\
+%                           & (0.011)                                               & (0.012)                  & (0.016)                    & (0.019)      & (0.015)                  & (0.024)              \\
+%Part-time without benefits & 0.46                                                  & 0.65                     & -0.19***                   & 0.49         & 0.64                     & -0.16***             \\
+%                           & (0.012)                                               & (0.012)                  & (0.017)                    & (0.019)      & (0.015)                  & (0.025)              \\
+%On-call                    & 0.47                                                  & 0.65                     & -0.17***                   & 0.49         & 0.69                     & -0.20***             \\
+%                           & (0.008)                                               & (0.008)                  & (0.012)                    & (0.014)      & (0.015)                  & (0.020)              \\
+%Contractor                 & 0.6                                                   & 0.55                     & 0.06                       & 0.61         & 0.72                     & -0.10**              \\
+%                           & (0.059)                                               & (0.061)                  & (0.085)                    & (0.034)      & (0.022)                  & (0.041)              \\
+%Office/Other               & 0.46                                                  & 0.63                     & -0.17***                   & 0.48         & 0.66                     & -0.18***             \\
+%                           & (0.010)                                               & (0.010)                  & (0.014)                    & (0.016)      & (0.015)                  & (0.022)             \\
+\bottomrule
+\end{tabular}
+	\begin{tablenotes}[para,flushleft]
+	\footnotesize
+	\item \emph{Notes.} Each cell reports the mean proportion of full-time nurses. The columns (3) and (6) show the statistical significance from the $t$-test of the null hypothesis that the two mean values between above/equal to median and below median ZIP codes (in Panel A) or months (in Panel B) are equal to each other.
+	* $p< 0.1$; \ ** $p< 0.05$; \ *** $p < 0.01$.
+	\end{tablenotes}
+\end{threeparttable}
+\end{sidewaystable}
+
+
+
+
+\newpage
+\begin{table}[H]
+\footnotesize
+\setlength\tabcolsep{10pt}
+\centering
+\caption{Balance of Covariates in the Patient Sample}
+\label{tab:balance}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}c}
+%|p{20mm} |p{20mm} |p{20mm} |p{20mm}}
+\toprule
+ & (1) & (2)  \\
+Full-time nurses' activeness & Low & High  \\
+%\\
+%Number of preoccupied nearest full-time nurses & \shortstack{Above/equal\\ to median} & \shortstack{Below \\median} & \shortstack{Above/equal\\ to median} & \shortstack{Below\\median}   \\
+\midrule
+
+\multicolumn{3}{l}{A. Key variables of interest}\\
+Proportion of full-time nurse visits  & 0.42 & 0.78 \\
+Indicator for hospital readmission & 0.19 & 0.21 \\
+
+\\
+\multicolumn{3}{l}{B. Care characteristics}\\
+
+Number of nurse handoffs & 1.26  & 1.53 \\
+Number of nurse visits  & 5.96 & 5.82 \\
+Mean number of days between two consecutive visits & 4.85 & 5.18 \\
+\\
+\multicolumn{3}{l}{C. Hospitalization risk factors}\\
+
+Risk for hospitalization: History of 2+ falls & 0.26 & 0.26 \\
+Risk for hospitalization: 2+ hospitalizations  & 0.37  & 0.41 \\
+Risk for hospitalization: Recent mental decline  & 0.07  & 0.07 \\
+Risk for hospitalization: Take 5+ medications  & 0.87  & 0.89 \\
+Risk for hospitalization: Other  & 0.09  & 0.10 \\
+\\
+\multicolumn{3}{l}{D. Demographic characteristics}\\
+Age  & 79.14  & 78.58 \\
+Female  & 0.60  & 0.61 \\
+White  & 0.83  & 0.76 \\
+Enrolled in per-visit paying Medicare Advantage  & 0.20  & 0.16 \\
+Enrolled in per-episode paying Medicare Advantage  & 0.06  & 0.04 \\
+Dual eligible  & 0.00  & 0.01 \\
+No assistance available  & 0.02  & 0.02 \\
+Living alone  & 0.24  & 0.24 \\
+\\
+\multicolumn{3}{l}{E. Comorbidity characteristics}\\
+Charlson Comorbidity Index  & 0.63  & 0.70 \\
+Overall status having serious progressive conditions (Very bad)  & 0.03  & 0.04 \\
+Overall status likely to remain in fragile health (Bad)  & 0.28  & 0.31 \\
+Overall status temporarily facing high health risks (Less bad)  & 0.61  & 0.58 \\
+High risk factor: Alcohol dependency  & 0.03  & 0.02 \\
+High risk factor: Drug dependency  & 0.01  & 0.01 \\
+High risk factor: Heavy smoking  & 0.13  & 0.14 \\
+High risk factor: Obesity  & 0.17  & 0.18 \\
+Pre-home health condition: Disruptive behavior  & 0.01  & 0.01 \\
+Pre-home health condition: Impaired decision-making  & 0.14  & 0.16 \\
+Pre-home health condition: Indwelling/Suprapublic catheter  & 0.02  & 0.02 \\
+Pre-home health condition: Intractable pain  & 0.11  & 0.12 \\
+Pre-home health condition: Memory loss  & 0.11  & 0.10 \\
+Pre-home health condition: Urinary incontinence  & 0.29  & 0.30 \\
+\\
+\multicolumn{3}{l}{F. Firm characteristics}\\
+Mean daily number of episodes in the office  & 170.54  & 192.59 \\
+Mean daily number of active nurses in the office  & 21.60  & 22.00 \\
+Mean daily proportion of full-time nurses in the office  & 0.41  & 0.54 \\
+
+\midrule
+Number of observations & 10,600 & 10,600\\
+\bottomrule
+\end{tabular}
+	\begin{tablenotes}[para,flushleft]
+	\footnotesize
+	\item \emph{Notes.} Mean values are reported. The ``High'' group of patients is defined as those whose full-time nurses' activeness is above or equal to median. The median thresholds used for grouping patients is 0.66 for the full-time nurses' activeness.
+	\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+
+\newpage
+\begin{table}[H]
+\begin{threeparttable}
+\footnotesize
+\setlength\tabcolsep{10pt}
+\centering
+\caption{IV First-Stage Results: Effect of Full-time Nurses' Activeness on the Proportion of Full-Time Nurse Visits}
+\label{tab:iv_onquality_firststage}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+&\multicolumn{4}{c}{Dep. var.: Proportion of full-time nurse visits}\\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Full-time nurses' activity share&       0.602***&       0.602***&       0.602***&       0.600***\\
+                    &     (0.034)   &     (0.035)   &     (0.035)   &     (0.035)   \\
+R-squared           &        0.32   &        0.32   &        0.33   &        0.33   \\
+F-statistic         &      307.20   &      301.83   &      299.66   &      301.47   \\
+\midrule
+Hospitalization risk controls & . & Yes & Yes & Yes \\
+Demographic controls & . & . & Yes & Yes \\
+ Comorbidity controls & . & . & . & Yes \\
+Observations & 21,200 & 21,200 & 21,200 & 21,200 \\
+\bottomrule
+\end{tabular}
+	\begin{tablenotes}[para,flushleft]
+	\footnotesize
+	\item \emph{Source.} Authors' proprietary data.
+ \emph{Notes.}
+	The unit of observation is a patient episode.
+	In all columns, I control for
+	the number of nurse handoffs, total number of nurse visits, mean interval of nurse visits, mean of firm-day level demand and labor supply characteristics during the patient's episode; and firm fixed effects, patient's ZIP code fixed effects, fixed effects for day of week, week of year, and year of the last day of care, respectively.
+%	The firm-day level characteristics include the total number of episodes, total number of active nurses, and fraction of active full-time nurses.
+	Firm-ZIP code level clustered standard errors in parentheses.
+	* $p< 0.1$; \ ** $p< 0.05$; \ *** $p < 0.01$.
+	\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+
+\clearpage
+\begin{table}[H]
+\footnotesize
+\setlength\tabcolsep{10pt}
+\centering
+\caption{Main Results: Effect of Proportion of Full-Time Nurse Visits on Patient Readmission}
+\label{tab:iv_onquality_2s}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+& \multicolumn{4}{c}{Dep var: Indicator for hospital readmission} \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+&\multicolumn{4}{c}{A. OLS}\\
+\cmidrule{2-5}
+Proportion of full-time nurse visits & -0.003 & -0.007 & -0.007 & -0.009 \\
+ & (0.013) & (0.010) & (0.010) & (0.009) \\
+R-squared & 0.13 & 0.15 & 0.15 & 0.18 \\
+
+\midrule
+&\multicolumn{4}{c}{B. 2SLS}\\
+\cmidrule{2-5}
+Proportion of full-time nurse visits&      -0.032   &      -0.036*  &      -0.035*  &      -0.035*  \\
+                    &     (0.021)   &     (0.020)   &     (0.020)   &     (0.020)   \\
+R-squared           &        0.02   &        0.02   &        0.02   &        0.02   \\
+%Proportion of full-time nurse visits&      -0.020** &      -0.024***&      -0.025***&      -0.026***\\
+%                    &     (0.008)   &     (0.008)   &     (0.008)   &     (0.008)   \\
+%Ratio of handoffs to nurse visits&      -0.090** &      -0.095** &      -0.096** &      -0.081** \\
+%                    &     (0.037)   &     (0.039)   &     (0.040)   &     (0.036)   \\
+%Number of nurse visits&       0.053***&       0.050***&       0.050***&       0.045***\\
+%                    &     (0.005)   &     (0.005)   &     (0.005)   &     (0.005)   \\
+%
+%R-squared           &       -0.27   &       -0.26   &       -0.26   &       -0.23   \\
+%J-statistic p-value &        0.43   &        0.47   &        0.44   &        0.46   \\
+
+\midrule
+Hospitalization risk controls & . & Yes & Yes & Yes \\
+Demographic controls & . & . & Yes & Yes \\
+ Comorbidity controls & . & . & . & Yes \\
+Observations & 21,200 & 21,200 & 21,200 & 21,200 \\
+
+%Mean dep var & 0.16 & 0.16 & 0.16 & 0.16 \\
+%SD of proportion of full-time nurse visits & 0.39 & 0.39 & 0.39 & 0.39\\
+\bottomrule
+\end{tabular}
+	\begin{tablenotes}[para,flushleft]
+	\footnotesize
+	\item \emph{Source.} Authors' proprietary data.
+ \emph{Notes.}
+	The unit of observation is a patient episode. I use a a two-step efficient generalized method of moments (GMM) estimator.
+	In all columns, I control for
+	the number of nurse handoffs, total number of nurse visits, mean interval of nurse visits, mean of firm-day level demand and labor supply characteristics during the patient's episode; and firm fixed effects, patient's ZIP code fixed effects, fixed effects for day of week, week of year, and year of the last day of care, respectively.
+%	The firm-day level characteristics include the total number of episodes, total number of active nurses, and fraction of active full-time nurses.
+	Firm-ZIP code level clustered standard errors in parentheses.
+	* $p< 0.1$; \ ** $p< 0.05$; \ *** $p < 0.01$.
+	\end{tablenotes}
+\end{threeparttable}
+\end{table}
+%* mean hosp rate = 0.163999
+%* 1 SD of proportion of full-time nurse visits = 0.387; a marginal effect of 1 SD increase = -0.2018*0.387/0.164 = -0.476
+%* a marginal effect of one more handoffs = 1*-0.0782/0.164 = -0.477
+%* a marginal effect of one more SN visit = 1*0.0513/0.164 = +0.313
+
+
+%\newpage
+%\begin{table}[H]
+%\footnotesize
+%\setlength\tabcolsep{10pt}
+%\centering
+%\caption{IV Results: Effect of Proportion of Visits by Nurses in Alternative Work Arrangements on Patient Readmission}
+%\label{tab:iv_onquality_2s_other}
+%\begin{threeparttable}
+%\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+%\begin{tabular}{l*{4}{c}}
+%\toprule
+%& \multicolumn{4}{c}{Dep var: Indicator for hospital readmission} \\
+% & (1) & (2) & (3) & (4) \\
+%\midrule
+%\multicolumn{5}{l}{A. Part-time nurses with benefits}\\
+%i) First-stage & \multicolumn{4}{c}{Dep var: Proportion of nurse visits}\\
+%\cmidrule{2-5}
+%Full-time nurses' activity share&      -0.123***&      -0.122***&      -0.123***&      -0.123***\\
+%                    &     (0.024)   &     (0.024)   &     (0.024)   &     (0.024)   \\
+%Number of preoccupied nearest full-time nurses&       0.007***&       0.007***&       0.007***&       0.007***\\
+%                    &     (0.003)   &     (0.003)   &     (0.003)   &     (0.003)   \\
+%R-squared           &        0.23   &        0.23   &        0.23   &        0.23   \\
+%F-statistic         &       13.44   &       13.47   &       13.49   &       13.85   \\
+%\\
+%ii) Second-stage & \multicolumn{4}{c}{Dep var: Indicator for hospital readmission}\\
+%\cmidrule{2-5}
+%Proportion of nurse visits           &       1.132***&       1.122***&       1.116***&       1.101***\\
+%                    &     (0.348)   &     (0.329)   &     (0.327)   &     (0.314)   \\
+%R-squared           &       -0.40   &       -0.41   &       -0.40   &       -0.41   \\
+%
+%\midrule
+%\multicolumn{5}{l}{B. On-call nurses}\\
+%i) First-stage & \multicolumn{4}{c}{Dep var: Proportion of nurse visits}\\
+%\cmidrule{2-5}
+%Full-time nurses' activity share&      -0.163***&      -0.163***&      -0.163***&      -0.162***\\
+%                    &     (0.035)   &     (0.035)   &     (0.035)   &     (0.035)   \\
+%Number of preoccupied nearest full-time nurses&       0.012***&       0.012***&       0.012***&       0.012***\\
+%                    &     (0.003)   &     (0.003)   &     (0.003)   &     (0.003)   \\
+%R-squared           &        0.20   &        0.20   &        0.20   &        0.21   \\
+%F-statistic         &       24.68   &       24.59   &       24.37   &       23.21   \\
+%\\
+%ii) Second-stage & \multicolumn{4}{c}{Dep var: Indicator for hospital readmission}\\
+%\cmidrule{2-5}
+%Proportion of nurse visits&       1.441***&       1.432***&       1.434***&       1.372***\\
+%                    &     (0.273)   &     (0.262)   &     (0.259)   &     (0.255)   \\
+%R-squared           &       -0.98   &       -0.99   &       -1.00   &       -0.95   \\
+%\midrule
+%Hospitalization risk controls & . & Yes & Yes & Yes \\
+%Demographic controls & . & . & Yes & Yes \\
+% Comorbidity controls & . & . & . & Yes \\
+%Observations & 21,200 & 21,200 & 21,200 & 21,200 \\
+%\bottomrule
+%\end{tabular}
+%	\begin{tablenotes}[para,flushleft]
+%	\footnotesize
+%	\item \emph{Source.} Authors' proprietary data.
+% \emph{Notes.}
+%	The unit of observation is a patient episode.
+%	In all columns, I control for
+%	the number of nurse handoffs, total number of nurse visits, mean interval of nurse visits, mean of firm-day level demand and labor supply characteristics during the patient's episode; and firm fixed effects, patient's ZIP code fixed effects, fixed effects for day of week, week of year, and year of the last day of care, respectively.
+%	Firm-ZIP code level clustered standard errors in parentheses.
+%	* $p< 0.1$; \ ** $p< 0.05$; \ *** $p < 0.01$.
+%	\end{tablenotes}
+%\end{threeparttable}
+%\end{table}
+
+
+\end{singlespace}
+
+\end{document}
