@@ -1,6 +1,4 @@
-*crrehosp_patsmpl_visit.do
 *create the base sample of admission-episode-visit level data
-*restrict to patients with prior hospitalization (for readmission outcome)
 *exclude visits after first hospitalization date in the admission
 *restrict to admissions for which I can identify whether the admission ended for one of the following reasons: death, hospitalized (first hosp), discharged (for this reason, restrict to episode starting on or before 8/9/2015)
 
@@ -116,6 +114,26 @@ keep if facility=="Hosp" */
 
 drop description tot_time
 duplicates drop
+
+*--------------------------
+*drop multiple lines per supposedly one visit
+duplicates tag payrollno visitdate_e visittime_e monday epiid, gen(dd)
+tab dd
+*130 obs w/ problems - b/c `visittype' `description` servicecode differs
+list visittype servicecode *time* lov if dd > 0
+
+*recode jobcode SN to RN b/c some duplicates have different jobcodes while discipline is same, e.g. RN & SN
+replace jobcode = "RN" if jobcode=="SN"
+
+*manually drop 3 obs: choose tot_time that is bigger
+drop visittype servicecode lov0
+
+bys payrollno visitdate visittime monday epiid: egen a = max(tot_time)
+drop if dd > 0 & tot_time < a
+duplicates drop
+drop a dd
+
+* the remaining duplicates have different jobcodes, serving 2 functions, e.g. SN & HHA
 
 compress
 save single_epi_visitlvl, replace

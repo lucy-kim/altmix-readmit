@@ -21,13 +21,13 @@ set matsize 11000
 * difference in work characteristics
 *----------------------------------------
 
-*get a list of offices in the analysis of the effect of labor mix on outcome
+/* *get a list of offices in the analysis of the effect of labor mix on outcome
 use anivlmis_hosp, clear
 keep offid_nu
 duplicates drop
 count
 tempfile office
-save `office'
+save `office' */
 
 * per day analysis------------------
 * conditional on working: per day, # visits; travel distance and time; total visit time; mean visit time; total visit travel costs; rate of working in other office
@@ -37,8 +37,8 @@ use daily_workerpanel, clear
 assert majordisc!=""
 keep if majordisc=="SN"
 
-*restrict to 67 offices
-merge m:1 offid_nu using `office', keep(3) nogen
+/* *restrict to 67 offices
+merge m:1 offid_nu using `office', keep(3) nogen */
 
 *aggregate to salaried, contingent-employee, contingent-contractors, and other categories
 assert status!=""
@@ -84,8 +84,8 @@ gen date = mdy(8,9,2015) - 59
 count if visitdate <= date
 keep if visitdate <= date
 
-*restrict to 67 offices
-merge m:1 offid_nu using `office', keep(3) nogen
+/* *restrict to 67 offices
+merge m:1 offid_nu using `office', keep(3) nogen */
 
 assert visitdate!=.
 
@@ -170,6 +170,10 @@ collapse (sum) dlov = lov dpwworked = workyes (mean) mdlov = lov, by(payrollno m
 *merge back with weekly worker panel data
 merge m:1 payrollno monday using `tmp2', keep(2 3)
 
+*replace # work days per week to zero if not working in that week
+assert worked!=.
+replace dpwworked = 0 if worked==0 & _merge==2
+
 *label vars
 lab var dnv "Number of visits"
 lab var visit_points "Number of visit points"
@@ -181,6 +185,11 @@ lab var visit_travel_cost "Total visit travel costs ($)"
 lab var dpwworked "Number of days worked"
 lab var worked "Working in the current office"
 lab var worked_oo "Working in a different office"
+
+*don't condition on working; count not working week as providing 0 visits & count how many visits / week does a nurse provide each week on average?
+bys st: sum dpwworked
+tab st, summarize(dpwworked)
+tab st, summarize(dnv)
 
 *conditional on working, per week, # visits; travel distance and time; total visit time; mean visit time; total visit travel costs
 preserve
