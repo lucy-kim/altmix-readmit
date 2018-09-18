@@ -1,0 +1,612 @@
+%% Packages
+% Math
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{bbm}
+%\usepackage{empheq}
+%\usepackage{MnSymbol} % for \dashedrightarrow - incompatible with amssymb?
+
+% Automatic line breaking in equations
+%\usepackage{flexisym}
+%\usepackage{breqn}
+%\usepackage{mathtools}
+
+% Graphics & Figures & Tables
+\usepackage{graphicx}
+%\usepackage[all]{xypic} - this is incompatible with diagrams!
+\usepackage[margin=40pt,font=small,bf]{caption} 
+%\usepackage{diagrams}
+\usepackage{multirow}
+
+% Misc
+%\usepackage[shortlabels]{enumitem}
+%\usepackage{enumerate}
+\renewcommand\labelenumi{(\roman{enumi})}
+\renewcommand\theenumi\labelenumi
+
+% Tensors
+\usepackage{tensind}
+\tensordelimiter{?}
+\tensorformat{}
+
+%% Math Operators
+\DeclareMathOperator{\PV}{p.v.}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\cchar}{char}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Sp}{sp}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\ev}{ev}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\spec}{spec}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\Vol}{Vol}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\support}{support}
+\DeclareMathOperator{\spt}{spt}
+\DeclareMathOperator{\irr}{irr}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\IM}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Sing}{Sing}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\HP}{HP}
+\DeclareMathOperator{\HF}{HF}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Frac}{frac}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\graph}{graph}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\EV}{EV}
+%\DeclareMathOperator{\Div}{div}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\area}{area}
+\DeclareMathOperator{\depth}{depth}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\Out}{Out}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Unif}{Unif}
+\DeclareMathOperator{\Poisson}{Poisson}
+\DeclareMathOperator{\Binomial}{Binomial}
+\DeclareMathOperator{\Exponential}{Exponential}
+\DeclareMathOperator{\Normal}{Normal}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\Area}{Area}
+\DeclareMathOperator{\cof}{cof}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\osc}{osc}
+\DeclareMathOperator{\Ent}{Ent}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+% hyperbolic
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arsec}{arsec}
+\DeclareMathOperator{\arcot}{arcot}
+\DeclareMathOperator{\arcsc}{arcsc}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arsech}{arsech}
+\DeclareMathOperator{\arcsch}{arcsch}
+\DeclareMathOperator{\arcoth}{arcoth} 
+
+%% Some useful commands
+
+% greek letters
+\newcommand{\al}{\alpha}
+\newcommand{\e}{\epsilon}
+\newcommand{\del}{\delta}
+\newcommand{\lam}{\lambda}
+\newcommand{\om}{\omega}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\Om}{\Omega}
+
+% mathbb letters
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\K}{\mathbbm{k}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\VV}{\mathbb{V}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\one}{\mathbbm{1}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\UD}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\SB}{\mathbb{S}}
+\newcommand{\I}{\mathbb{I}}
+
+% mathcal letters
+\newcommand{\mcB}{\mathcal{B}}
+\newcommand{\mcL}{\mathcal{L}}
+\newcommand{\mcK}{\mathcal{K}}
+\newcommand{\mcO}{\mathcal{O}}
+\newcommand{\mcF}{\mathcal{F}}
+\newcommand{\mcT}{\mathcal{T}}
+\newcommand{\mcS}{\mathcal{S}}
+\newcommand{\mcG}{\mathcal{G}}
+\newcommand{\mcX}{\mathcal{X}}
+\newcommand{\mcP}{\mathcal{P}}
+\newcommand{\mcY}{\mathcal{Y}}
+\newcommand{\mcQ}{\mathcal{Q}}
+\newcommand{\mcM}{\mathcal{M}}
+\newcommand{\mcN}{\mathcal{N}}
+\newcommand{\mcC}{\mathcal{C}}
+\newcommand{\mcD}{\mathcal{D}}
+\newcommand{\mcA}{\mathcal{A}}
+\newcommand{\mcE}{\mathcal{E}}
+\newcommand{\mcH}{\mathcal{H}}
+\newcommand{\mcR}{\mathcal{R}}
+\newcommand{\mcW}{\mathcal{W}}
+\newcommand{\mcI}{\mathcal{I}}
+
+% mathfrak letters
+\newcommand{\mfp}{\mathfrak{p}}
+\newcommand{\mfq}{\mathfrak{q}}
+\newcommand{\mfm}{\mathfrak{m}}
+\newcommand{\mfn}{\mathfrak{n}}
+
+% tilde letters
+\newcommand{\tgamma}{\tilde{\gamma}}
+\newcommand{\tX}{\tilde{X}}
+\newcommand{\tY}{\tilde{Y}}
+\newcommand{\tZ}{\tilde{Z}}
+\newcommand{\tN}{\tilde{N}}
+\newcommand{\tM}{\tilde{M}}
+\newcommand{\tOmega}{\tilde{\Omega}}
+\newcommand{\tg}{\tilde{g}}
+
+% groups
+\newcommand{\ZN}{{\Z/N\Z}}
+\newcommand{\Zn}{{\Z/n\Z}}
+
+% arrows
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\onto}{\twoheadrightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\mra}{\mapsto}
+\newcommand{\pra}{\rightharpoonup}      % partial function
+%\newcommand{\pra}{\dashedrightarrow}      % partial function - needs MnSymbol
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\ira}{\hookrightarrow}        % injection
+\newcommand{\sra}{\twoheadrightarrow} % surjection
+\newcommand{\xra}{\xrightarrow}
+\newcommand{\wka}{\rightharpoonup}     % weak convergence
+\newcommand{\wsa}{\stackrel{*}{\rightharpoonup}} % weak-* convergence
+\newcommand{\upto}{\uparrow}
+\newcommand{\dnto}{\downarrow}
+
+% misc.
+\newcommand{\mc}{\mathcal}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mbg}{\boldsymbol} % for greek letters
+\newcommand{\dual}{\widehat}
+\newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\inp}[1]{\langle #1 \rangle} % inner product (angle brackets) - one argument
+\newcommand{\ip}[2]{\langle #1, #2 \rangle} % inner product (angle brackets) - two arguments
+\newcommand{\st}{\ \text{s.t.}\ }
+\newcommand{\V}[1]{\mathbf{#1}}
+\newcommand{\impl}{\Rightarrow}
+\newcommand{\qimpl}{\qquad\Rightarrow\qquad}
+\newcommand{\imply}{$\Rightarrow$}
+\newcommand{\LRI}{$\Rightarrow$} % left to right implication
+\newcommand{\RLI}{$\Leftarrow$} % right to left implication
+\newcommand{\equv}{$\Leftrightarrow$}
+\newcommand{\miff}{\Leftrightarrow}
+\newcommand{\isom}{\cong}
+\newcommand{\gen}[1]{\langle #1 \rangle}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\imod}[1]{\,\text{(mod $#1$)}}
+\newcommand{\tp}{\otimes} % tensor product
+\newcommand{\sm}{\backslash}
+\newcommand{\paren}[1]{\left( {#1} \right) }
+\newcommand{\pfrac}[2]{\paren{ \frac{#1}{#2} } }
+\newcommand{\pfr}{\pfrac}
+\newcommand{\brak}[1]{\left[ {#1} \right] }
+\newcommand{\brac}[1]{\left\{ {#1} \right\} }
+\newcommand{\Abs}[1]{\left| {#1} \right| }
+\newcommand{\Norm}[1]{\Abs{\Abs{ #1 } }}
+\newcommand{\conj}{\overline}
+\newcommand{\bd}{\partial}
+\newcommand{\w}{\wedge}
+\newcommand{\sub}{\subset}
+\newcommand{\LS}[2]{\paren{ \frac{#1}{#2} }} % Legendre symbol
+\newcommand{\BLS}[2]{\left[ \frac{#1}{#2} \right]} % Legendre symbol in brackets
+\newcommand{\av}[1]{\overrightarrow{#1}} % vector with arrow
+\newcommand{\evat}[2]{\left. {#1} \right|_{#2} }
+\newcommand{\rbar}[1]{\left. {#1} \right| }
+\newcommand{\inv}[1]{{\frac{1}{#1}}}
+
+% partial derivatives (based on http://www.sci.usq.edu.au/staff/robertsa/LaTeX/ltxmaths.html)
+\newcommand{\D}[2]{\frac{\partial #2}{\partial #1}} 
+\newcommand{\DD}[2]{\frac{\partial^2 #2}{\partial #1^2}}
+\newcommand{\DK}[3]{\frac{\partial^{#1} {#3}}{\partial #2^{#1}} }
+
+% ordinary derivatives
+\newcommand{\OD}[2]{\frac{d {#2}}{d {#1}}}
+\newcommand{\ODat}[2]{\left. \frac{d}{ d{#1} } \right|_{{#1}={#2}}}
+\newcommand{\ODfat}[3]{\left. \frac{d{#3} }{ d{#1} } \right|_{{#1}={#2}}}
+
+% sums
+\newcommand{\sumn}{\sum_{n=1}^\infty}
+\newcommand{\summ}{\sum_{m=1}^\infty}
+\newcommand{\sumk}{\sum_{k=1}^\infty}
+\newcommand{\sumi}{\sum_{i=1}^\infty}
+\newcommand{\sumj}{\sum_{j=1}^\infty}
+
+\newcommand{\sumnz}{\sum_{n=0}^\infty}
+\newcommand{\summz}{\sum_{m=0}^\infty}
+\newcommand{\sumkz}{\sum_{k=0}^\infty}
+\newcommand{\sumiz}{\sum_{i=0}^\infty}
+\newcommand{\sumjz}{\sum_{j=0}^\infty}
+
+\newcommand{\sumik}{\sum_{i=1}^k}
+\newcommand{\sumjk}{\sum_{j=1}^k}
+\newcommand{\summk}{\sum_{m=1}^k}
+
+\newcommand{\sumin}{\sum_{i=1}^n}
+\newcommand{\sumjn}{\sum_{j=1}^n}
+\newcommand{\sumkn}{\sum_{k=1}^n}
+\newcommand{\summn}{\sum_{m=1}^n}
+
+\newcommand{\sumim}{\sum_{i=1}^m}
+\newcommand{\sumjm}{\sum_{j=1}^m}
+\newcommand{\sumkm}{\sum_{k=1}^m}
+\newcommand{\sumnm}{\sum_{n=1}^m}
+
+\newcommand{\sumnN}{\sum_{n=1}^N}
+\newcommand{\sumiN}{\sum_{i=1}^N}
+\newcommand{\sumjN}{\sum_{j=1}^N}
+\newcommand{\sumkN}{\sum_{k=1}^N}
+\newcommand{\summN}{\sum_{m=1}^N}
+
+\newcommand{\sumizk}{\sum_{i=0}^k}
+\newcommand{\sumjzk}{\sum_{j=0}^k}
+\newcommand{\summzk}{\sum_{m=0}^k}
+
+\newcommand{\sumizn}{\sum_{i=0}^n}
+\newcommand{\sumjzn}{\sum_{j=0}^n}
+\newcommand{\sumkzn}{\sum_{k=0}^n}
+\newcommand{\summzn}{\sum_{m=0}^n}
+
+\newcommand{\sumizm}{\sum_{i=0}^m}
+\newcommand{\sumjzm}{\sum_{j=0}^m}
+\newcommand{\sumkzm}{\sum_{k=0}^m}
+\newcommand{\sumnzm}{\sum_{n=0}^m}
+
+\newcommand{\sumnzN}{\sum_{n=0}^N}
+\newcommand{\sumizN}{\sum_{i=0}^N}
+\newcommand{\sumjzN}{\sum_{j=0}^N}
+\newcommand{\sumkzN}{\sum_{k=0}^N}
+\newcommand{\summzN}{\sum_{m=0}^N}
+
+\newcommand{\sumijn}{\sum_{i,j=1}^n}
+
+% convergence
+\newcommand{\xraN}{\xra{N\to\infty}}
+\newcommand{\xran}{\xra{n\to\infty}}
+\newcommand{\xram}{\xra{m\to\infty}}
+\newcommand{\xrak}{\xra{k\to\infty}}
+\newcommand{\xraj}{\xra{j\to\infty}}
+\newcommand{\xral}{\xra{l\to\infty}}
+\newcommand{\xraR}{\xra{R\to\infty}}
+\newcommand{\xrar}{\xra{r\to0}}
+\newcommand{\xraeps}{\xra{\epsilon \to 0}}
+
+
+% limits
+\newcommand{\limn}{\lim_{n\to\infty}}
+\newcommand{\limm}{\lim_{m\to\infty}}
+\newcommand{\limN}{\lim_{N\to\infty}}
+\newcommand{\limez}{\lim_{\epsilon\to0}}
+\newcommand{\limhz}{\lim_{|h|\to0}}
+\newcommand{\limj}{\lim_{j\to\infty}}
+\newcommand{\limi}{\lim_{i\to\infty}}
+\newcommand{\limk}{\lim_{k\to\infty}}
+\newcommand{\limh}{\lim_{h\to\infty}}
+
+% limsup
+\newcommand{\limsupn}{\limsup_{n\to\infty}}
+\newcommand{\limsupk}{\limsup_{k\to\infty}}
+\newcommand{\limsuph}{\limsup_{h\to\infty}}
+
+% liminf
+\newcommand{\liminfn}{\liminf_{n\to\infty}}
+\newcommand{\liminfk}{\liminf_{k\to\infty}}
+\newcommand{\liminfh}{\liminf_{h\to\infty}}
+
+% integrals
+\newcommand{\intii}{\int_{-\infty}^{\infty} }
+\newcommand{\intzi}{\int_{0}^{\infty}}
+\newcommand{\intiz}{\int_{-\infty}^0}
+\newcommand{\intoi}{\int_{1}^{\infty}}
+\newcommand{\intzo}{\int_{0}^{1} }
+
+% integral symbols
+\def\Xint#1{\mathchoice
+{\XXint\displaystyle\textstyle{#1}}%
+{\XXint\textstyle\scriptstyle{#1}}%
+{\XXint\scriptstyle\scriptscriptstyle{#1}}%
+{\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+\!\int}
+\def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$ }
+\vcenter{\hbox{$#2#3$ }}\kern-.58\wd0}}
+\def\ddashint{\Xint=}
+\def\avint{\Xint-} % average intetegral
+
+% for use in integrals
+\newcommand{\dd}{\, d}
+\newcommand{\dx}{\dd x}
+\newcommand{\dt}{\dd t}
+\newcommand{\dds}{\dd s}
+\newcommand{\du}{\dd u}
+\newcommand{\dm}{\dd m}
+\newcommand{\dlam}{\dd \lambda}
+\newcommand{\dmu}{\dd \mu}
+\newcommand{\dnu}{\dd \nu}
+\newcommand{\dpi}{\dd \pi}
+\newcommand{\dgam}{\dd \gamma}
+\newcommand{\dz}{\dd z}
+\newcommand{\dy}{\dd y}
+\newcommand{\dr}{\dd r}
+\newcommand{\dR}{\dd R}
+\newcommand{\dw}{\dd w}
+\newcommand{\dk}{\dd k}
+\newcommand{\dA}{\dd A}
+\newcommand{\dv}{\dd v}
+\newcommand{\dP}{\dd \PP}
+\newcommand{\dS}{\dd S}
+\newcommand{\dtheta}{\dd \theta}
+\newcommand{\dphi}{\dd \phi}
+\newcommand{\drho}{\dd \rho}
+\newcommand{\dxi}{\dd \xi}
+\newcommand{\dzeta}{\dd \zeta}
+\newcommand{\dpsi}{\dd \psi}
+\newcommand{\deta}{\dd \eta}
+\newcommand{\dXi}{\dd \Xi}
+\newcommand{\ddp}{\dd p}
+\newcommand{\dq}{\dd q}
+%
+% modified from Peter Constantin
+%\newcommand{\be}{\begin{equation}}
+%\newcommand{\ee}{\end{equation}}
+%\newcommand{\beu}{\begin{equation*}}
+%\newcommand{\eeu}{\end{equation*}}
+%\newcommand{\ba}{\begin{array}{l}}
+%\newcommand{\ea}{\end{array}}
+%\def\bal#1\eal{\begin{align}#1\end{align}}
+%\def\balu#1\ealu{\begin{align*}#1\end{align*}}
+%\def\bali#1\eali{\begin{equation}\begin{aligned}#1\end{aligned}\end{equation}}
+%\newcommand{\bpde}{\begin{pde}}
+%\newcommand{\epde}{\end{pde}}
+%\newcommand{\bpdeu}{\begin{pde*}}
+%\newcommand{\epdeu}{\end{pde*}}
+%\newcommand{\pa}{\partial}
+%\newcommand{\na}{\nabla} 
+%\newcommand{\la}{\label}
+\newcommand{\fr}{\frac}
+%\newcommand{\pad}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\beu}{\begin{equation*}}
+\newcommand{\eeu}{\end{equation*}}
+\newcommand{\ba}{\begin{array}{l}}
+\newcommand{\ea}{\end{array}}
+\def\bal#1\eal{\begin{align}#1\end{align}}
+\def\balu#1\ealu{\begin{align*}#1\end{align*}}
+\def\bali#1\eali{\begin{equation}\begin{aligned}#1\end{aligned}\end{equation}}
+\newcommand{\pad}[2]{\frac{\partial {#1}}{\partial {#2}}}
+
+% nonmath
+\newcommand{\tbf}{\textbf}
+\newcommand{\tit}{\textit}
+
+%% For use with breqn package
+\newcommand{\MC}{\condition*}% math condition
+\newcommand{\TC}{\condition}% text condition
+
+%% My own version of the above
+\newcommand{\ATC}[1]{\qquad\text{#1}}
+
+%% Environments
+\newenvironment{pde}{\begin{equation}\left\{ \begin{alignedat}{2}}{\end{alignedat} \right. \end{equation}}
+\newenvironment{pde*}{\begin{equation*}\left\{ \begin{alignedat}{2}}{\end{alignedat}\right. \end{equation*}}
+% Example:
+% \begin{pde*}
+% -\Delta u &= 0 &\quad& \text{in $U$} \\
+% u &= 0 & &\text{on $\bd U$}
+% \end{pde*}
+
+
+%% Redefining stuff...
+%\let\divsym\div
+%\renewcommand{\div}{\Div} % divergence, not division symbol! (who needs the division symbol?!)
+\let\ophi\phi
+\renewcommand{\phi}{\varphi} % \varphi is prettier; use \ophi to get the standard latex phi
+%\renewcommand{\mid}{:}
+
+
+
+
+
+\usepackage{mathabx}
+
+% extra packages used in this doc
+\usepackage{bm} % extra bold for greek letters
+\newcommand{\mli}[1]{\mathit{#1}} %multiple letters in math
+%\newcommand{\varA}[1]{{\operatorname{#1}}}
+\newcommand{\var}[1]{{\operatorname{\mathit{#1}}}} %dash in math with italics
+
+\usepackage{booktabs, stackengine}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setstackEOL{\#}
+\setstackgap{L}{12pt}
+  
+% Page setup
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[doublespacing]{setspace} % double spacing
+\usepackage{tocloft}
+\usepackage[figlist, tablist,markers]{endfloat} % put tables, figures at the end 
+
+
+% wrap text in a table
+%\renewcommand{\arraystretch}{1.5}
+\usepackage{tabulary}
+\usepackage[newcommands]{ragged2e}
+
+% under bar
+\usepackage{etoolbox}
+%\usepackage{fixltx2e}
+\usepackage{accents}
+\robustify{\underaccent}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}  
+%\DeclareRobustCommand{\ubar}[1]{\underaccent{\bar}{#1}}
+
+%% Theorems, etc.
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{exmp}[defn]{Example}
+\newtheorem{claim}{Claim}
+\newtheorem{claimproof}{Proof of claim}
+
+\theoremstyle{plain}
+\newtheorem{thm}[defn]{Theorem}
+\newtheorem{prop}[defn]{Proposition}
+\newtheorem{lem}[defn]{Lemma}
+\newtheorem{cor}[defn]{Corollary}
+\newtheorem{fact}[defn]{Fact}
+
+\theoremstyle{remark}
+\newtheorem{rem}[defn]{Remark}
+
+%Todo notes
+%\usepackage[obeyFinal]{todonotes}
+\usepackage{todonotes}
+
+% appendix 
+\usepackage[toc,page]{appendix} % appendix
+
+% images
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[capposition=top]{floatrow} % notes for figure
+\usepackage{ragged2e}
+  
+% tables
+\usepackage{booktabs, caption, fixltx2e, subcaption, siunitx}
+\usepackage[flushleft]{threeparttable}
+%\usepackage{array}
+%\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+%\newcolumntype{C}{@{\extracolsep{3cm}}c@{\extracolsep{0pt}}}%
+%\usepackage{multirow}
+%\newcommand{\rowgroup}[1]{\hspace{-1em}#1}
+%\newcommand{\sym}[1]{\rlap{$#1$}} % for symbols in Table
+\usepackage{longtable} % See help in http://www2.astro.psu.edu/gradinfo/psuthesis/longtable.html
+\usepackage{pdflscape}
+\usepackage{afterpage}
+\usepackage{capt-of}% or use the larger `caption` package
+\usepackage{adjustbox}
+\usepackage{rotating} % rotate table for sidways
+
+% single-spaced in tables
+%\usepackage{etoolbox} 
+%\AtBeginEnvironment{tabular}{\singlespacing}
+%\AtBeginEnvironment{tablenotes}{\singlespacing}
+%\AtBeginEnvironment{tabular*}{\singlespacing}
+%\AtBeginEnvironment{threeparttable}{\singlespacing}
+%\AtBeginEnvironment{longtable}{\singlespacing}
+
+% wrap text in a table
+%\renewcommand{\arraystretch}{1.5}
+\usepackage{tabulary}
+\usepackage[newcommands]{ragged2e}
+
+
+% Sections
+%\makeatletter
+%\renewcommand{\section}{\@startsection
+%{section}%                   % the name
+%{1}%                         % the level
+%{0mm}%                       % the indent
+%{0.5\baselineskip}%            % the before skip
+%{0.5\baselineskip}%          % the after skip
+%{\normalfont\bf}} % the style
+%\renewcommand{\subsection}{\@startsection
+%{subsection}%                   % the name
+%{1}%                         % the level
+%{0mm}%                       % the indent
+%{0.5\baselineskip}%            % the before skip
+%{0.5\baselineskip}%          % the after skip
+%{\normalfont\bf}} % the style
+%\makeatother
+%\renewcommand{\refname}{\normalsize References}
+
+% PDF links, etc.
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	urlcolor=blue,
+	linkcolor=blue,
+	citecolor=blue,
+	linktoc=all,
+	pdfauthor='Kunhee Kim'
+}
+
+
+% References
+\usepackage{natbib}
+\usepackage{cite}
+
+% title page
+\usepackage{titling} % title abstract on the same page
+
+% footnote without markers
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}

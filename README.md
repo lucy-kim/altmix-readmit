@@ -7,3 +7,5 @@ This project examines the effect of alternative work arrangement on performance 
   - create a episode-day level dataset from the episode-visit level data
 3. `crsingle_epi_daylvl_an.do`
   - fine-tune the sample for regression analysis by applying sample restriction rules & filling in missing values in patient characteristics
+4. `analtwork_readmit_pd.do`
+  - run regression of readmission indicator on the indicators of seeing different types of nurses using the patient-day level sample
