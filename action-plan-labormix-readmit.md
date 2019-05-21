@@ -1,7 +1,7 @@
 # Action plan for the paper “Alternative Work Arrangement and Performance: Evidence from Nurses in Home Health Care”
 
 ##	Story
-If a patient sees a nurse in alternative work arrangement, do bad things happen?
+If a patient sees a nurse in alternative work arrangement, does it increase the risk of rehospitalization?
 
 ##	Main analysis
 
